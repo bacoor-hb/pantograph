@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 302 98" style="enable-background:new 0 0 302 98;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;stroke:#AFDFFF;}
+	.st1{fill:#ABB4BB;}
+	.st2{font-family:'Roboto-Regular';}
+	.st3{font-size:12px;}
+	.st4{fill:none;stroke:#AFDFFF;stroke-width:2;}
+	.st5{filter:url(#a);}
+	.st6{fill:#D9F0FF;stroke:#3098DC;}
+	.st7{fill:#4A4A4A;}
+	.st8{font-size:16px;}
+	.st9{fill:none;stroke:#3098DC;stroke-width:2;}
+</style>
+<filter  filterUnits="objectBoundingBox" height="143.8%" id="a" width="104.8%" x="-2.4%" y="-15.6%">
+	<feOffset  dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+	<feGaussianBlur  in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"></feGaussianBlur>
+	<feComposite  in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+	<feColorMatrix  in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.123075181 0"></feColorMatrix>
+</filter>
+<g>
+	<g transform="translate(25 45)">
+		<path class="st0" d="M0.5,0.5h250v26H0.5V0.5z"/>
+		<text transform="matrix(1 0 0 1 31 19)" class="st1 st2 st3">3</text>
+		<text transform="matrix(1 0 0 1 50 19)" class="st1 st2 st3">OXz3…T3A4</text>
+		<text transform="matrix(1 0 0 1 142 19)" class="st1 st2 st3">0.020000 TOMO</text>
+		<circle class="st4" cx="16.5" cy="14.5" r="6.5"/>
+	</g>
+	<g transform="translate(25)">
+		<path class="st0" d="M0.5,0.5h250v26H0.5V0.5z"/>
+		<text transform="matrix(1 0 0 1 31 19)" class="st1 st2 st3">1</text>
+		<text transform="matrix(1 0 0 1 50 19)" class="st1 st2 st3">OXa4…s0a2</text>
+		<text transform="matrix(1 0 0 1 142 19)" class="st1 st2 st3">0.01500 TOMO</text>
+		<circle class="st4" cx="16.5" cy="14.5" r="6.5"/>
+	</g>
+	<g transform="translate(25 71)">
+		<path class="st0" d="M0.5,0.5h250v26H0.5V0.5z"/>
+		<text transform="matrix(1 0 0 1 31 18)" class="st1 st2 st3">4</text>
+		<text transform="matrix(1 0 0 1 50 18)" class="st1 st2 st3">OXd2…D0V4</text>
+		<text transform="matrix(1 0 0 1 142 18)" class="st1 st2 st3">0.030000 TOMO</text>
+		<circle class="st4" cx="16.5" cy="13.5" r="6.5"/>
+	</g>
+	<g transform="translate(4 21)">
+		<g class="st5">
+			<path id="b_1_" d="M0,0h294v32H0V0z"/>
+		</g>
+		<path class="st6" d="M0.5,0.5h293v31H0.5V0.5z"/>
+		<text transform="matrix(1 0 0 1 36 22)" class="st7 st2 st8">2</text>
+		<text transform="matrix(1 0 0 1 58 22)" class="st7 st2 st8">OXe7…B0a1</text>
+		<text transform="matrix(1 0 0 1 166 22)" class="st7 st2 st8">0.041000 TOMO</text>
+		<circle class="st9" cx="19.5" cy="16.5" r="7.5"/>
+		<path class="st9" d="M15,17l2.5,2.5l6.5-5.6"/>
+	</g>
+</g>
+</svg>

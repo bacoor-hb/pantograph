@@ -1,0 +1,1694 @@
+{
+  "migrateSai": {
+    "message": "Makerからのメッセージ：新しいMulti-Collateral Daiトークンがリリースされました。 古いトークンはSaiと呼ばれます。 Saiトークンを新しいDaiにアップグレードして下さい"
+  },
+  "migrateSaiInfo": {
+    "message": "この通知を却下するために、トークンリストからトークンを移行するか、SAIを非表示にします。"
+  },
+  "migrate": {
+    "message": "移行する"
+  },
+  "showIncomingTransactions": {
+    "message": "受信履歴を表示"
+  },
+  "showIncomingTransactionsDescription": {
+    "message": "受信履歴を表示するにはTomoScanを使用してください"
+  },
+  "cancelledConnectionWithMetaMask": {
+    "message": "パンタグラフとの接続が中断"
+  },
+  "chartOnlyAvailableEth": {
+    "message": "チャートはTomoChainネットワークでのみ利用可能"
+  },
+  "connectedSites": {
+    "message": "コントラクトへアクセス"
+  },
+  "connectingWithMetaMask": {
+    "message": "パンタグラフと接続"
+  },
+  "connectTo": {
+    "message": "Connect to $1,",
+    "description": "$1 is the name/origin of a site/dapp that the user can connect to Pantograph"
+  },
+  "chooseAnAcount": {
+    "message": "アカウントを選択"
+  },
+  "contractInteraction": {
+    "message": "契約の相互作用"
+  },
+  "reject": {
+    "message": "拒否"
+  },
+  "redirectingBackToDapp": {
+    "message": "Dappsにリダイレクトしています"
+  },
+  "about": {
+    "message": "パンタグラフについて"
+  },
+  "aboutSettingsDescription": {
+    "message": "バージョン、サポートセンター、連絡先情報"
+  },
+  "license": {
+    "message": "ライセンス"
+  },
+  "licenseSettingsDescription": {
+    "message": "ライセンス"
+  },
+  "acceleratingATransaction": {
+    "message": "*より高いガス価格を使用すると、ネットワークでより速く処理され、トランザクションを高速化できる可能性が高くなりますが、常に保証されるとは限りません。"
+  },
+  "accessAndSpendNotice": {
+    "message": "$1 may access and spend up to this max amount,",
+    "description": "$1 is the url of the site requesting ability to spend"
+  },
+  "accessingYourCamera": {
+    "message": "カメラにアクセスしています..."
+  },
+  "account": {
+    "message": "アカウント"
+  },
+  "accountDetails": {
+    "message": "アカウント詳細"
+  },
+  "accountName": {
+    "message": "アカウント名"
+  },
+  "accountOptions": {
+    "message": "アカウントオプション"
+  },
+  "accountSelectionRequired": {
+    "message": "アカウントを選択"
+  },
+  "activityLog": {
+    "message": "ログ"
+  },
+  "addNetwork": {
+    "message": "ネットワークを追加"
+  },
+  "addRecipient": {
+    "message": "受信者を追加"
+  },
+  "advanced": {
+    "message": "高度"
+  },
+  "advancedSettingsDescription": {
+    "message": "開発者向け機能では状態ログのダウンロード、アカウントをリセットしテストネットやカスタムRPCの設定が可能です"
+  },
+  "advancedOptions": {
+    "message": "高度なオプション"
+  },
+  "addToAddressBook": {
+    "message": "アドレスブックに追加"
+  },
+  "addToAddressBookModalPlaceholder": {
+    "message": "例: John D"
+  },
+  "addAlias": {
+    "message": "エイリアスを追加"
+  },
+  "addToken": {
+    "message": "トークンを追加"
+  },
+  "addTokens": {
+    "message": "トークンを追加"
+  },
+  "addSuggestedTokens": {
+    "message": "提出されたトークンを追加"
+  },
+  "addAcquiredTokens": {
+    "message": "パンタグラフを使用してトークンを追加"
+  },
+  "allowOriginSpendToken": {
+    "message": "Allow $1 to spend your $2?,",
+    "description": "$1 is the url of the site and $2 is the symbol of the token they are requesting to spend"
+  },
+  "allowWithdrawAndSpend": {
+    "message": "Allow $1 to withdraw and spend up to the following amount:,",
+    "description": "The url of the site that requested permission to 'withdraw and spend'"
+  },
+  "amount": {
+    "message": "数量"
+  },
+  "amountWithColon": {
+    "message": "数量"
+  },
+  "appDescription": {
+    "message": "ブラウザで利用するTomoChainウォレットです",
+    "description": "アプリケーションの説明"
+  },
+  "appName": {
+    "message": "Pantograph",
+    "description": "アプリケーション名"
+  },
+  "approve": {
+    "message": "承認する"
+  },
+  "approved": {
+    "message": "承認済み"
+  },
+  "asset": {
+    "message": "アセット"
+  },
+  "attemptingConnect": {
+    "message": "ブロックチェーンに接続中"
+  },
+  "attemptToCancel": {
+    "message": "キャンセルしますか？"
+  },
+  "attemptToCancelDescription": {
+    "message": "この取引をキャンセルしてもトランザクションがキャンセルされる保証はありません。キャンセルが成功した場合でも上記の手数料が請求されます"
+  },
+  "attributions": {
+    "message": "属性"
+  },
+  "autoLockTimeLimit": {
+    "message": "自動ログアウト(分)"
+  },
+  "autoLockTimeLimitDescription": {
+    "message": "パンタグラフが自動ログアウトするまでの時間を分単位で設定します"
+  },
+  "average": {
+    "message": "平均"
+  },
+  "back": {
+    "message": "戻る"
+  },
+  "backToAll": {
+    "message": "全て戻る"
+  },
+  "backupApprovalNotice": {
+    "message": "パスフレーズを安全な場所に保管すれば資金を安全に保有できます"
+  },
+  "backupApprovalInfo": {
+    "message": "デバイスの紛失、パスワード忘れ、パンタグラフを再インストール、又は別のデバイスでウォレットにアクセスする場合このパスフレーズが必要です"
+  },
+  "backupNow": {
+    "message": "今すぐバックアップ"
+  },
+  "balance": {
+    "message": "残高"
+  },
+  "balanceOutdated": {
+    "message": "残高が古い可能性があります"
+  },
+  "basic": {
+    "message": "基本"
+  },
+  "blockExplorerUrl": {
+    "message": "ブロックエクスプローラー"
+  },
+  "blockExplorerView": {
+    "message": "アカウントを1ドルで表示",
+    "description": "カスタムブロックエクスプローラーのURLに置き換えられた$1"
+  },
+  "blockiesIdenticon": {
+    "message": "Blockies Identiconを使用"
+  },
+  "nonceField": {
+    "message": "トランザクションのナンスを調整"
+  },
+  "nonceFieldHeading": {
+    "message": "カスタムナンス"
+  },
+  "nonceFieldDescription": {
+    "message": "確認画面でナンス（トランザクション番号）を変更します。これは高度な機能です"
+  },
+  "browserNotSupported": {
+    "message": "このブラウザはサポートされていません..."
+  },
+  "builtInCalifornia": {
+    "message": "パンタグラフは、Bacoorで設計および製造されました"
+  },
+  "buyWithWyre": {
+    "message": "WyreでETHを購入する"
+  },
+  "buyWithWyreDescription": {
+    "message": "Wyreでは、デビットカードを使用してETHをPantographアカウントに入金できます。"
+  },
+  "buyCoinSwitch": {
+    "message": "Changellyで簡単！TOMOに交換する"
+  },
+  "buyCoinSwitchExplainer": {
+    "message": "Changellyは約300種類の仮想通貨から簡単にTOMOに交換できるサービスです。"
+  },
+  "bytes": {
+    "message": "バイト"
+  },
+  "off": {
+    "message": "オフ"
+  },
+  "ok": {
+    "message": "OK"
+  },
+  "on": {
+    "message": "オン"
+  },
+  "optionalBlockExplorerUrl": {
+    "message": "ExplorerのブロックURL（オプション）"
+  },
+  "cancel": {
+    "message": "キャンセル"
+  },
+  "cancelAttempt": {
+    "message": "キャンセル"
+  },
+  "cancellationGasFee": {
+    "message": "ガス代のキャンセル"
+  },
+  "cancelled": {
+    "message": "キャンセルしました"
+  },
+  "chainId": {
+    "message": "チェーンID"
+  },
+  "clickToAdd": {
+    "message": "アカウントに追加するには$1をクリックしてください"
+  },
+  "clickToRevealSeed": {
+    "message": "クリックするとパスフレーズを確認できます。"
+  },
+  "close": {
+    "message": "閉じる"
+  },
+  "chromeRequiredForHardwareWallets": {
+    "message": "ハードウェアウォレットに接続するにはGoogle Chromeを使用する必要があります"
+  },
+  "confirm": {
+    "message": "確認"
+  },
+  "confirmed": {
+    "message": "確認済み"
+  },
+  "confirmPassword": {
+    "message": "パスワードを認証"
+  },
+  "confirmSecretBackupPhrase": {
+    "message": "シークレットバックアップフレーズを確認"
+  },
+  "congratulations": {
+    "message": "おめでとうございます！"
+  },
+  "connectHardwareWallet": {
+    "message": "ハードウェアウォレットと接続"
+  },
+  "connect": {
+    "message": "接続"
+  },
+  "connectingTo": {
+    "message": "$1への接続"
+  },
+  "connectingToKovan": {
+    "message": "Kovanテストネットワークへの接続"
+  },
+  "connectingToMainnet": {
+    "message": "Main TomoChain Networkへの接続"
+  },
+  "connectingToRopsten": {
+    "message": "Ropstenテストネットワークへの接続"
+  },
+  "connectingToRinkeby": {
+    "message": "Rinkebyテストネットワークへの接続"
+  },
+  "connectingToLocalhost": {
+    "message": "Localhost 8545への接続"
+  },
+  "connectingToGoerli": {
+    "message": "Goerliテストネットワークへの接続"
+  },
+  "connectingToTomoChain": {
+    "message": "メイントモチェーンネットワークへの接続"
+  },
+  "connectingToTomoTestnet": {
+    "message": "Test TomoChain Networkへの接続"
+  },
+  "contacts": {
+    "message": "連絡先"
+  },
+  "contactsSettingsDescription": {
+    "message": "あなたの連絡先を追加、編集、削除、管理します"
+  },
+  "continueToWyre": {
+    "message": "ワイアへ進む"
+  },
+  "continueToCoinSwitch": {
+    "message": "Changellyに行く"
+  },
+  "contractDeployment": {
+    "message": "契約"
+  },
+  "conversionProgress": {
+    "message": "変換中"
+  },
+  "copiedButton": {
+    "message": "コピーしました"
+  },
+  "copiedExclamation": {
+    "message": "コピーしました"
+  },
+  "copyAddress": {
+    "message": "クリップボードにアドレスをコピー"
+  },
+  "copyTransactionId": {
+    "message": "トランザクションIDをコピー"
+  },
+  "copiedTransactionId": {
+    "message": "トランザクションIDをコピーしました"
+  },
+  "copyToClipboard": {
+    "message": "クリップボードにコピー"
+  },
+  "copyButton": {
+    "message": "コピー"
+  },
+  "copyPrivateKey": {
+    "message": "これはプライベートキーです（クリックでコピー）"
+  },
+  "create": {
+    "message": "作成する"
+  },
+  "createAccount": {
+    "message": "アカウントを作成"
+  },
+  "createAWallet": {
+    "message": "ウォレットを作成"
+  },
+  "createPassword": {
+    "message": "パスワードを作成"
+  },
+  "currencyConversion": {
+    "message": "通貨交換"
+  },
+  "currentLanguage": {
+    "message": "現在の言語"
+  },
+  "customGas": {
+    "message": "ガス代をカスタマイズ"
+  },
+  "customGasSubTitle": {
+    "message": "送信手数料を増やすと処理時間が短縮されます"
+  },
+  "customToken": {
+    "message": "カスタムトークン"
+  },
+  "customRPC": {
+    "message": "カスタムRPC"
+  },
+  "customSpendLimit": {
+    "message": "カスタム支出制限"
+  },
+  "dataBackupFoundInfo": {
+    "message": "アカウントデータの一部は以前のパンタグラフのインストール中にバックアップされました。 あなたの設定、連絡先、トークンが含まれます。 今すぐ復元しますか？"
+  },
+  "decimalsMustZerotoTen": {
+    "message": "小数は0から36まで"
+  },
+  "decimal": {
+    "message": "小数点桁数"
+  },
+  "defaultNetwork": {
+    "message": "デフォルトはメインネットです"
+  },
+  "delete": {
+    "message": "削除"
+  },
+  "deleteAccount": {
+    "message": "アカウントを削除"
+  },
+  "deposit": {
+    "message": "入手"
+  },
+  "depositEther": {
+    "message": "TOMOを入手する"
+  },
+  "details": {
+    "message": "詳細"
+  },
+  "disconnectAccount": {
+    "message": "アカウントを切断"
+  },
+  "disconnectAll": {
+    "message": "すべて切断"
+  },
+  "disconnectAllModalDescription": {
+    "message": "問題ありませんか？ アカウントがこのサイトから切断されます。"
+  },
+  "disconnectAccountModalDescription": {
+    "message": "問題ありませんか？ アカウント(\"$1\")はこのサイトから切断されます。"
+  },
+  "disconnectAccountQuestion": {
+    "message": "アカウントを切断しますか？"
+  },
+  "disconnectFromThisAccount": {
+    "message": "このアカウントから切断しますか？"
+  },
+  "disconnectAllAccountsQuestion": {
+    "message": "すべてのアカウントを切断しますか？"
+  },
+  "directDepositEther": {
+    "message": "TOMOやトークンを受信する"
+  },
+  "directDepositEtherExplainer": {
+    "message": "TOMOやトークンの受け取りには、このアカウント情報を送信者に伝えて下さい。"
+  },
+  "domainLastConnect": {
+    "message": "最終接続：$1ドル",
+    "description": "$1は、ユーザーが特定のドメインに最後に接続した日付です"
+  },
+  "done": {
+    "message": "完了"
+  },
+  "downloadGoogleChrome": {
+    "message": "Google Chromeをダウンロード"
+  },
+  "downloadSecretBackup": {
+    "message": "このパスフレーズを安全な場所に保管してください"
+  },
+  "downloadStateLogs": {
+    "message": "ログをダウンロード"
+  },
+  "dontHaveAHardwareWallet": {
+    "message": "ハードウェアウォレットを使用しますか？"
+  },
+  "dropped": {
+    "message": "おろす"
+  },
+  "edit": {
+    "message": "編集"
+  },
+  "editContact": {
+    "message": "連絡先を編集"
+  },
+  "editPermission": {
+    "message": "権限を編集"
+  },
+  "emailUs": {
+    "message": "メール"
+  },
+  "endOfFlowMessage1": {
+    "message": "パスフレーズを保管するのはあなたの責任です！"
+  },
+  "endOfFlowMessage2": {
+    "message": "安全に保管する為のヒント"
+  },
+  "endOfFlowMessage3": {
+    "message": "複数の場所にバックアップを保存"
+  },
+  "endOfFlowMessage4": {
+    "message": "フレーズは誰にも共有しないで下さい"
+  },
+  "endOfFlowMessage5": {
+    "message": "注意！ パンタグラフは、あなたのパスフレーズを要求する事はありません"
+  },
+  "endOfFlowMessage6": {
+    "message": "パスフレーズを再バックアップする必要がある場合、[設定]-> [セキュリティ]で見つける事ができます"
+  },
+  "endOfFlowMessage7": {
+    "message": "質問や怪しい物を見つけた場合は support@pantograph.io にメールしてください"
+  },
+  "endOfFlowMessage8": {
+    "message": "パンタグラフはパスフレーズを回復できません"
+  },
+  "endOfFlowMessage9": {
+    "message": "もっと詳しく"
+  },
+  "endOfFlowMessage10": {
+    "message": "完了"
+  },
+  "extensionId": {
+    "message": "拡張ID：$1",
+    "description": "$1は、Pantographに接続する別の拡張機能のIDであるランダムな文字列です"
+  },
+  "externalExtension": {
+    "message": "外部拡張"
+  },
+  "onboardingReturnNotice": {
+    "message": "\\ $1 \\ \"はこのタブを閉じ、$ 2に戻ります\"、",
+    "description": "オンボーディングを開始したサイトにユーザーを戻します"
+  },
+  "ensRegistrationError": {
+    "message": "ENS登録エラー"
+  },
+  "ensNotFoundOnCurrentNetwork": {
+    "message": "ENSが見つかりません。ネットワークを切り替えて下さい"
+  },
+  "enterAnAlias": {
+    "message": "エイリアスを入力"
+  },
+  "enterMaxSpendLimit": {
+    "message": "最大費用制限を入力"
+  },
+  "enterPassword": {
+    "message": "パスワードを入力"
+  },
+  "enterPasswordContinue": {
+    "message": "続行するにはパスワードを入力して下さい"
+  },
+  "errorCode": {
+    "message": "コード：$1",
+    "description": "デバッグ目的で表示されるエラーコード。 $1はエラーコードです"
+  },
+  "errorDetails": {
+    "message": "エラー詳細",
+    "description": "デバッグ目的でエラーの詳細を表示する折りたたみ可能なセクションのタイトル"
+  },
+  "errorMessage": {
+    "message": "メッセージ：$1",
+    "description": "デバッグのためにエラーメッセージを表示しました。 $1はエラーメッセージです"
+  },
+  "errorName": {
+    "message": "コード：$1",
+    "description": "デバッグ目的で表示されるエラー名。 $1はエラー名です"
+  },
+  "errorPageTitle": {
+    "message": "パンタグラフでエラーが発生しました",
+    "description": "一般的なエラー"
+  },
+  "errorPageMessage": {
+    "message": "サポートが必要な場合はsupport@pantograph.ioまでお問い合わせ下さい",
+    "description": "通知で一般的なエラーが表示されます"
+  },
+  "errorPagePopupMessage": {
+    "message": "サポートするために、support @ pantograph.ioにお問い合わせください。",
+    "description": "UIの通知で一般的なエラー表示される"
+  },
+  "errorStack": {
+    "message": "スタック",
+    "description": "デバッグ目的で表示されるエラースタックのタイトル"
+  },
+  "ethereumPublicAddress": {
+    "message": "パンタグラフの公開アドレス"
+  },
+  "etherscanView": {
+    "message": "TomoScanで見る"
+  },
+  "estimatedProcessingTimes": {
+    "message": "予想処理時間"
+  },
+  "expandView": {
+    "message": "ビューを展開"
+  },
+  "exportPrivateKey": {
+    "message": "プライべートキーをエクスポート"
+  },
+  "failed": {
+    "message": "失敗しました"
+  },
+  "fast": {
+    "message": "早く"
+  },
+  "faster": {
+    "message": "もっと早く"
+  },
+  "feeAssociatedRequest": {
+    "message": "手数料がかかります"
+  },
+  "fiat": {
+    "message": "フィアット",
+    "description": "交換数類"
+  },
+  "fileImportFail": {
+    "message": "ファイルのインポートができない場合ここをクリックして下さい",
+    "description": "JSONファイルからアカウントをインポート"
+  },
+  "forgetDevice": {
+    "message": "このデバイスを忘れる"
+  },
+  "from": {
+    "message": ""
+  },
+  "fromShapeShift": {
+    "message": "ShapeShiftから"
+  },
+  "functionApprove": {
+    "message": "機能：承認"
+  },
+  "functionType": {
+    "message": "機能タイプ"
+  },
+  "gasLimit": {
+    "message": "ガス制限"
+  },
+  "gasLimitInfoModalContent": {
+    "message": "ガスリミットは支払うガス代の最大単位です"
+  },
+  "gasLimitTooLow": {
+    "message": "ガスリミットは21,000です"
+  },
+  "gasUsed": {
+    "message": "使用ガス"
+  },
+  "gasPrice": {
+    "message": "ガス価格（GWEI）"
+  },
+  "gasPriceExtremelyLow": {
+    "message": "ガス代が非常に低い"
+  },
+  "gasPriceInfoModalContent": {
+    "message": "ガス代はユニットに対して支払うTomoChainの量を指定します"
+  },
+  "gasPriceNoDenom": {
+    "message": "ガス代"
+  },
+  "general": {
+    "message": "全般"
+  },
+  "generalSettingsDescription": {
+    "message": "法定通貨、主要通貨、言語、blockies identicon"
+  },
+  "getEther": {
+    "message": "TomoChainを取得する"
+  },
+  "getEtherFromFaucet": {
+    "message": "トモチェーンを蛇口から$1で手に入れましょう",
+    "description": "TomoChainネットワーク名を表示"
+  },
+  "getHelp": {
+    "message": "ヘルプ"
+  },
+  "getStarted": {
+    "message": "さあ始めましょう！"
+  },
+  "happyToSeeYou": {
+    "message": "We’re happy to see you."
+  },
+  "hardware": {
+    "message": "ハードウェア"
+  },
+  "hardwareWalletConnected": {
+    "message": "接続されたハードウェアウォレット"
+  },
+  "hardwareWallets": {
+    "message": "ハードウェアウォレットを接続"
+  },
+  "hardwareWalletsMsg": {
+    "message": "パンタグラフで使用するハードウェアウォレットを選択"
+  },
+  "havingTroubleConnecting": {
+    "message": "接続に問題がありますか？"
+  },
+  "here": {
+    "message": "こちら",
+    "description": "詳細はこちら（troubleTokenBalancesを使用）"
+  },
+  "hexData": {
+    "message": "Hex データ"
+  },
+  "hide": {
+    "message": "非表示"
+  },
+  "hideToken": {
+    "message": "トークンを非表示"
+  },
+  "hideTokenPrompt": {
+    "message": "非表示にしますか？"
+  },
+  "history": {
+    "message": "履歴"
+  },
+  "import": {
+    "message": "インポート",
+    "description": "選択したファイルからアカウントをインポート"
+  },
+  "importAccount": {
+    "message": "アカウントをインポート"
+  },
+  "importAccountMsg": {
+    "message": "インポートしたアカウントは最初に作成したパスフレーズに紐付けされません。もっと詳しく"
+  },
+  "importAccountSeedPhrase": {
+    "message": "アカウントをインポートする"
+  },
+  "importWallet": {
+    "message": "ウォレットをインポート"
+  },
+  "importYourExisting": {
+    "message": "パスフレーズを使用してウォレットをインポート"
+  },
+  "imported": {
+    "message": "インポート",
+    "description": "完全にロードされたことを表示させるステータスです。"
+  },
+  "importUsingSeed": {
+    "message": "パスフレーズを使ってアカウントをインポートする"
+  },
+  "infoHelp": {
+    "message": "情報とヘルプ"
+  },
+  "initialTransactionConfirmed": {
+    "message": "取引はネットワークによって確認されました。 OKをクリックして戻る"
+  },
+  "insufficientBalance": {
+    "message": "残高不足"
+  },
+  "insufficientFunds": {
+    "message": "残高不足"
+  },
+  "insufficientTokens": {
+    "message": "トークンが不十分"
+  },
+  "invalidAddress": {
+    "message": "無効なアドレス"
+  },
+  "invalidAddressRecipient": {
+    "message": "受信者のアドレスが無効"
+  },
+  "knownAddressRecipient": {
+    "message": "既知のコントラクトアドレス"
+  },
+  "invalidAddressRecipientNotEthNetwork": {
+    "message": "TOMOネットワークではなく、小文字に設定"
+  },
+  "invalidInput": {
+    "message": "無効"
+  },
+  "invalidRPC": {
+    "message": "無効なRPC URL"
+  },
+  "invalidBlockExplorerURL": {
+    "message": "無効なブロックエクスプローラーURL"
+  },
+  "invalidSeedPhrase": {
+    "message": "無効なパスフレーズ"
+  },
+  "ipfsGateway": {
+    "message": "IPFSゲートウェイ"
+  },
+  "ipfsGatewayDescription": {
+    "message": "IPFS CIDゲートウェイのURLを入力"
+  },
+  "invalidIpfsGateway": {
+    "message": "無効なIPFSゲートウェイ：有効なURLを入力"
+  },
+  "forbiddenIpfsGateway": {
+    "message": "禁止IPFSゲートウェイ：CIDゲートウェイを指定して下さい"
+  },
+  "jsonFile": {
+    "message": "JSONファイル",
+    "description": "アカウントのインポート形式"
+  },
+  "kovan": {
+    "message": "Kovanテストネットワーク"
+  },
+  "max": {
+    "message": "最大"
+  },
+  "lastConnected": {
+    "message": "最終接続"
+  },
+  "learnMore": {
+    "message": "もっと詳しく"
+  },
+  "learnAboutRisks": {
+    "message": "リスクについてはこちらをご確認下さい"
+  },
+  "ledgerAccountRestriction": {
+    "message": "新しいアカウントを追加する前に、最後のアカウントを使用して下さい"
+  },
+  "letsGoSetUp": {
+    "message": "セットアップを始めましょう！"
+  },
+  "likeToAddTokens": {
+    "message": "トークンを追加しますか？"
+  },
+  "likeToConnect": {
+    "message": "$1がPantographアカウントに接続したい、",
+    "description": "$1は、Pantographへの接続を要求するサイト/ dappの名前/ urlです"
+  },
+  "links": {
+    "message": "リンク"
+  },
+  "liveGasPricePredictions": {
+    "message": "ガス価格予測"
+  },
+  "loading": {
+    "message": "読み込み中..."
+  },
+  "loadingTokens": {
+    "message": "トークンを読み込んでいます..."
+  },
+  "loadMore": {
+    "message": "更に読み込む"
+  },
+  "localhost": {
+    "message": "ローカルホスト8545"
+  },
+  "login": {
+    "message": "Log In"
+  },
+  "logout": {
+    "message": "ログアウト"
+  },
+  "lock": {
+    "message": "ログアウト"
+  },
+  "lockTimeTooGreat": {
+    "message": "ログアウト時間が長すぎます"
+  },
+  "mainnet": {
+    "message": "Main TomoChain Network"
+  },
+  "memorizePhrase": {
+    "message": "このフレーズをメモして下さい"
+  },
+  "memo": {
+    "message": "メモ"
+  },
+  "menu": {
+    "message": "メニュー"
+  },
+  "message": {
+    "message": "メッセージ"
+  },
+  "pantographDescription": {
+    "message": "TomoChainとDecentralized Webに接続します"
+  },
+  "pantographVersion": {
+    "message": "パンタグラフ版"
+  },
+  "missingYourTokens": {
+    "message": "トークンが表示されませんか？"
+  },
+  "mobileSyncText": {
+    "message": "パスワードを入力し確認"
+  },
+  "myAccounts": {
+    "message": "マイアカウント"
+  },
+  "myWalletAccounts": {
+    "message": "マイウォレットアカウント"
+  },
+  "myWalletAccountsDescription": {
+    "message": "パンタグラフで作成したアカウントは、このセクションに自動的に追加されます"
+  },
+  "mustSelectOne": {
+    "message": "少なくとも1つのトークンを選択する必要があります"
+  },
+  "needEtherInWallet": {
+    "message": "パンタグラフを使用して分散アプリケーションを操作するにはウォレットにTomoChainが必要です"
+  },
+  "needImportFile": {
+    "message": "インポートするファイルを選択する必要があります",
+    "description": "ユーザーは重要なアカウントであり、続行するにはファイルを追加する必要があります"
+  },
+  "negativeETH": {
+    "message": "送信量は0以上にしてください。"
+  },
+  "networkName": {
+    "message": "ネットワーク名"
+  },
+  "networks": {
+    "message": "ネットワーク"
+  },
+  "networkSettingsDescription": {
+    "message": "カスタムRPCネットワークを追加、及び編集"
+  },
+  "nevermind": {
+    "message": "後で"
+  },
+  "newAccount": {
+    "message": "新しいアカウント"
+  },
+  "newAccountDetectedDialogMessage": {
+    "message": "新しいアドレスが検出されました！アドレス帳に追加するには、ここをクリック"
+  },
+  "newAccountNumberName": {
+    "message": "アカウント$1",
+    "description": "アカウント作成画面で作成される次のアカウントのデフォルト名"
+  },
+  "newContact": {
+    "message": "新しい連絡先"
+  },
+  "newContract": {
+    "message": "新しいコントラクト"
+  },
+  "newPassword": {
+    "message": "新しいパスワード（最低8文字）"
+  },
+  "newNetwork": {
+    "message": "新しいネットワーク"
+  },
+  "newToPantograph": {
+    "message": "新しいウォレットを作成しますか？"
+  },
+  "noAlreadyHaveSeed": {
+    "message": "パスフレーズから復元します。"
+  },
+  "protectYourKeys": {
+    "message": "あなたの鍵を保管してください！"
+  },
+  "protectYourKeysMessage1": {
+    "message": "パスフレーズを安全な場所に保管して下さい。パンタグラフを模倣しようとするWebサイトの報告がありました。 パンタグラフはあなたのパスフレーズを要求しません！"
+  },
+  "protectYourKeysMessage2": {
+    "message": "パスフレーズを安全な場所に保管してください。 不明な点がある場合は support@pantograph.io にメールしてください"
+  },
+  "rpcUrl": {
+    "message": "新しいRPC URL"
+  },
+  "onlyConnectTrust": {
+    "message": "信頼できるサイトに接続してください"
+  },
+  "optionalChainId": {
+    "message": "ChainID（オプション）"
+  },
+  "optionalSymbol": {
+    "message": "シンボル（オプション）"
+  },
+  "newTotal": {
+    "message": "新しい合計"
+  },
+  "newTransactionFee": {
+    "message": "新しい取引手数料"
+  },
+  "next": {
+    "message": "次へ"
+  },
+  "nextNonceWarning": {
+    "message": "ナンスは、推奨されるナンス$1よりも高い",
+    "description": "パンタグラフの内部ロジックによる次のナンス"
+  },
+  "noAddressForName": {
+    "message": "この名前にはアドレスが設定されていません"
+  },
+  "noDeposits": {
+    "message": "デポジットなし"
+  },
+  "noConversionRateAvailable": {
+    "message": "利用可能な交換レートはありません"
+  },
+  "noTransactions": {
+    "message": "取引がありません"
+  },
+  "noThanks": {
+    "message": "結構です"
+  },
+  "notEnoughGas": {
+    "message": "ガス代が足りません"
+  },
+  "noWebcamFoundTitle": {
+    "message": "ウェブカメラが見つかりません"
+  },
+  "noWebcamFound": {
+    "message": "ウェブカメラが見つかりません。もう一度やり直してください"
+  },
+  "ofTextNofM": {
+    "message": "の"
+  },
+  "orderOneHere": {
+    "message": "TrezorまたはLedgerを注文し資金を保管します"
+  },
+  "origin": {
+    "message": "原点"
+  },
+  "parameters": {
+    "message": "パラメーター"
+  },
+  "participateInMetaMetrics": {
+    "message": "MetaMetricsに参加する"
+  },
+  "participateInMetaMetricsDescription": {
+    "message": "パンタグラフを改善するようにMetaMetricsに参加する"
+  },
+  "password": {
+    "message": "パスワード"
+  },
+  "passwordsDontMatch": {
+    "message": "パスワードが違います！"
+  },
+  "passwordNotLongEnough": {
+    "message": "パスワードが短いです。"
+  },
+  "pastePrivateKey": {
+    "message": "ここにプライべートキーを貼り付け",
+    "description": "プライべートキーからアカウントをインポート"
+  },
+  "pending": {
+    "message": "処理中"
+  },
+  "personalAddressDetected": {
+    "message": "個人アドレスが検出されました。 トークンのコントラクトアドレスを入力"
+  },
+  "prev": {
+    "message": "前へ"
+  },
+  "primaryCurrencySetting": {
+    "message": "主要通貨"
+  },
+  "primaryCurrencySettingDescription": {
+    "message": "ネイティブを選択して、チェーンのネイティブ通貨（例：TOMO）で値の表示を優先します。 フィアット通貨での値の表示を優先するためにフィアットを選択します"
+  },
+  "privacyMsg": {
+    "message": "プライバシーポリシー"
+  },
+  "privateKey": {
+    "message": "プライべートキー",
+    "description": "アカウントをインポートするファイルを選択"
+  },
+  "privateKeyWarning": {
+    "message": "警告: このプライべートキーは絶対に公開しないで下さい。公開するとアカウント内の資産が盗まれる危険があります"
+  },
+  "privateNetwork": {
+    "message": "プライベートネットワーク"
+  },
+  "proposedApprovalLimit": {
+    "message": "提案された承認制限"
+  },
+  "qrCode": {
+    "message": "QRコードを表示"
+  },
+  "queue": {
+    "message": "キュー"
+  },
+  "readdToken": {
+    "message": "「トークンを追加」でトークンを追加することができます"
+  },
+  "recents": {
+    "message": "最新"
+  },
+  "recipientAddress": {
+    "message": "受信者アドレス"
+  },
+  "recipientAddressPlaceholder": {
+    "message": "検索、パブリックアドレス（0x）、またはENS"
+  },
+  "rejectAll": {
+    "message": "すべて拒否する"
+  },
+  "rejectTxsN": {
+    "message": "$1の取引を拒否する"
+  },
+  "rejectTxsDescription": {
+    "message": "1ドルの取引をバッチ拒否しようとしています。"
+  },
+  "rejected": {
+    "message": "拒否されました"
+  },
+  "reset": {
+    "message": "リセット"
+  },
+  "resetAccount": {
+    "message": "アカウントをリセット"
+  },
+  "resetAccountDescription": {
+    "message": "アカウントをリセットすると取引履歴が削除されます。 アカウントの残高もパスフレーズも何も影響されません"
+  },
+  "deleteNetwork": {
+    "message": "ネットワークを削除しますか？"
+  },
+  "deleteNetworkDescription": {
+    "message": "このネットワークを削除しますか？"
+  },
+  "remindMeLater": {
+    "message": "後で"
+  },
+  "restoreFromSeed": {
+    "message": "アカウントを復元しますか？"
+  },
+  "restoreAccountWithSeed": {
+    "message": "パスフレーズでウォレットを復元する"
+  },
+  "restoreWalletPreferences": {
+    "message": "$1からのデータのバックアップが見つかりました。 ウォレットの設定を復元しますか？",
+    "description": "$1は、データがバックアップされた日付です"
+  },
+  "requestsAwaitingAcknowledgement": {
+    "message": "承認待ち"
+  },
+  "required": {
+    "message": "必須"
+  },
+  "restore": {
+    "message": "復元する"
+  },
+  "revealSeedWords": {
+    "message": "パスフレーズを表示"
+  },
+  "revealSeedWordsTitle": {
+    "message": "パスフレーズ"
+  },
+  "revealSeedWordsDescription": {
+    "message": "ブラウザを変更したり、他のPCからこのアカウントにアクセスするには、このパスフレーズが必要です。パスフレーズは安全の場所に保管して下さい"
+  },
+  "revealSeedWordsWarningTitle": {
+    "message": "このパスフレーズは絶対に共有しないでください！"
+  },
+  "revealSeedWordsWarning": {
+    "message": "パスフレーズは全ての資産を盗むためにも使用できます"
+  },
+  "remove": {
+    "message": "削除"
+  },
+  "removeAccount": {
+    "message": "アカウントを削除"
+  },
+  "removeAccountDescription": {
+    "message": "このアカウントはウォレットから削除されます。 パスフレーズ又はプライべートキーを保管した事を確認してください"
+  },
+  "readyToConnect": {
+    "message": "接続しましたか？"
+  },
+  "revokeInPermissions": {
+    "message": "*パンタグラフ設定で権限を表示および取り消すことができます"
+  },
+  "rinkeby": {
+    "message": "リンケビーテストネットワーク"
+  },
+  "ropsten": {
+    "message": "Ropstenテストネットワーク"
+  },
+  "goerli": {
+    "message": "Goerliテストネットワーク"
+  },
+  "save": {
+    "message": "保存"
+  },
+  "slow": {
+    "message": "遅い"
+  },
+  "slower": {
+    "message": "もっと遅い"
+  },
+  "saveAsCsvFile": {
+    "message": "CSVファイルとして保存"
+  },
+  "scanInstructions": {
+    "message": "QRコードをカメラの前に向けて下さい"
+  },
+  "scanQrCode": {
+    "message": "QRコードをスキャン"
+  },
+  "search": {
+    "message": "検索"
+  },
+  "searchResults": {
+    "message": "検索結果"
+  },
+  "secretBackupPhrase": {
+    "message": "シークレットパスフレーズ"
+  },
+  "secretBackupPhraseDescription": {
+    "message": "パスフレーズを使用すると、アカウントのバックアップと復元が簡単になります"
+  },
+  "secretBackupPhraseWarning": {
+    "message": "警告：パスフレーズは絶対に公開しないで下さい。 あなたの資産が盗難の危険に晒されます"
+  },
+  "secretPhrase": {
+    "message": "パスフレーズを入力しウォレットを復元します。"
+  },
+  "securityAndPrivacy": {
+    "message": "セキュリティとプライバシー"
+  },
+  "securitySettingsDescription": {
+    "message": "プライバシー設定とウォレットパスフレーズ"
+  },
+  "seedPhrasePlaceholder": {
+    "message": "各単語を単一のスペースで区切ります"
+  },
+  "seedPhraseReq": {
+    "message": "パスフレーズには、12、15、18、21、又は24フレーズが含まれます"
+  },
+  "selectCurrency": {
+    "message": "通貨を選択"
+  },
+  "selectEachPhrase": {
+    "message": "各単語を選択して下さい"
+  },
+  "selectLocale": {
+    "message": "ロケールを選択"
+  },
+  "selectType": {
+    "message": "タイプを選択"
+  },
+  "send": {
+    "message": "送信"
+  },
+  "sendAmount": {
+    "message": "送金額"
+  },
+  "sendETH": {
+    "message": "TOMOを送信"
+  },
+  "sendTokens": {
+    "message": "トークンを送信"
+  },
+  "sentEther": {
+    "message": "TOMOを送信"
+  },
+  "sentTokens": {
+    "message": "トークンを送信"
+  },
+  "separateEachWord": {
+    "message": "各単語を単一のスペースで区切ります"
+  },
+  "searchTokens": {
+    "message": "トークンを検索"
+  },
+  "searchAccounts": {
+    "message": "アカウントを検索"
+  },
+  "noAccountsFound": {
+    "message": "アカウントが見つかりません"
+  },
+  "selectAnAccount": {
+    "message": "アカウントを選択する"
+  },
+  "selectAnAccountHelp": {
+    "message": "パンタグラフで表示するアカウントを選択"
+  },
+  "selectAHigherGasFee": {
+    "message": "トランザクションを早く処理するために、より高いガス料金を選択する"
+  },
+  "selectHdPath": {
+    "message": "HDパスを選択"
+  },
+  "selectPathHelp": {
+    "message": "既存の元帳アカウントが下に表示されない場合は、パスを\\ Legacy（MEW / MyCrypto）\"に切り替えてみてください\""
+  },
+  "settings": {
+    "message": "設定"
+  },
+  "showAdvancedGasInline": {
+    "message": "高度なガス制御"
+  },
+  "showAdvancedGasInlineDescription": {
+    "message": "これを選択すると、送信画面と確認画面でガス代と制限管理が表示されます"
+  },
+  "showFiatConversionInTestnets": {
+    "message": "テストネットで交換を表示"
+  },
+  "showFiatConversionInTestnetsDescription": {
+    "message": "テストネットでフィアット変換を表示"
+  },
+  "showPrivateKeys": {
+    "message": "プライベートキーを表示"
+  },
+  "showHexData": {
+    "message": "Hexデータを表示"
+  },
+  "showHexDataDescription": {
+    "message": "これを選択して、送信画面でHexデータフィールドを表示"
+  },
+  "sign": {
+    "message": "サインイン"
+  },
+  "signatureRequest": {
+    "message": "署名リクエスト"
+  },
+  "signatureRequest1": {
+    "message": "メッセージ"
+  },
+  "signed": {
+    "message": "ログインしました！"
+  },
+  "signNotice": {
+    "message": "このメッセージへの署名は危険な可能性があります。\n信頼できるサイトのみログインして下さい\nあなたのアカウントで署名して下さい。今後のバージョンでは、\nこの危険なメソッドは削除される予定です"
+  },
+  "sigRequest": {
+    "message": "署名リクエスト"
+  },
+  "somethingWentWrong": {
+    "message": "おおっと！何かがおかしい"
+  },
+  "speedUp": {
+    "message": "スピードアップ"
+  },
+  "speedUpCancellation": {
+    "message": "このキャンセルをスピードアップ"
+  },
+  "speedUpTransaction": {
+    "message": "このトランザクションをスピードアップ"
+  },
+  "spendLimitPermission": {
+    "message": "許可制限"
+  },
+  "spendLimitRequestedBy": {
+    "message": "1ドルでリクエストされた費用制限",
+    "description": "許可制限をリクエストしているサイトの起源"
+  },
+  "spendLimitTooLarge": {
+    "message": "制限が大きすぎます"
+  },
+  "spendLimitInvalid": {
+    "message": "制限が無効です。正数のみを入力"
+  },
+  "switchNetworks": {
+    "message": "ネットワークを取り替え"
+  },
+  "stateLogFileName": {
+    "message": "パンタグラフ状態ログ"
+  },
+  "stateLogs": {
+    "message": "状態ログ"
+  },
+  "stateLogsDescription": {
+    "message": "状態ログには、アカウントのアドレス及び送信されたトランザクションが含まれます"
+  },
+  "stateLogError": {
+    "message": "状態ログの取得中にエラーが発生しました"
+  },
+  "step1HardwareWallet": {
+    "message": "1.ハードウェアウォレットを接続"
+  },
+  "step1HardwareWalletMsg": {
+    "message": "ハードウェアウォレットをコンピューターに直接接続"
+  },
+  "step2HardwareWallet": {
+    "message": "2.アカウントを選択"
+  },
+  "step2HardwareWalletMsg": {
+    "message": "表示するアカウントを選択。一つしか選択できません"
+  },
+  "step3HardwareWallet": {
+    "message": "3. Dappsを開始"
+  },
+  "step3HardwareWalletMsg": {
+    "message": "TomoChainアカウントと同じようにハードウェアウォレットを使用します。 Dappsに接続、TOMO、TRC21トークンを送信"
+  },
+  "storePhrase": {
+    "message": "このパスフレーズをパスワードマネージャーに保存"
+  },
+  "submit": {
+    "message": "提出"
+  },
+  "submitted": {
+    "message": "提出しました"
+  },
+  "supportCenter": {
+    "message": "サポートセンターをご覧ください"
+  },
+  "symbol": {
+    "message": "シンボル"
+  },
+  "symbolBetweenZeroTwelve": {
+    "message": "シンボルは11文字以下"
+  },
+  "syncWithThreeBox": {
+    "message": "データを3Boxと同期する（実験的）"
+  },
+  "syncWithThreeBoxDescription": {
+    "message": "設定を3Boxでバックアップします。この機能は現在実験中でリスクがあります"
+  },
+  "syncWithThreeBoxDisabled": {
+    "message": "3Boxは初期同期中のエラーの為、無効"
+  },
+  "syncWithMobile": {
+    "message": "モバイルと同期"
+  },
+  "syncWithMobileTitle": {
+    "message": "モバイルと同期"
+  },
+  "syncWithMobileDesc": {
+    "message": "アカウントをモバイルデバイスと同期できます。 パンタグラフモバイルを開き、\\ Settings \\に行って、\"Browser Extensionから同期\"をタップします"
+  },
+  "syncWithMobileDescNewUsers": {
+    "message": "パンタグラフモバイルを初めて開く場合は、モバイルの手順に従ってください"
+  },
+  "syncWithMobileScanThisCode": {
+    "message": "パンタグラフモバイルから、このQRコードをスキャン"
+  },
+  "syncWithMobileBeCareful": {
+    "message": "このQRコードをスキャンする時、他の人に画面が見えないよう注意して下さい"
+  },
+  "syncWithMobileComplete": {
+    "message": "正常に同期しました。パンタグラフモバイルをお楽しみください！"
+  },
+  "terms": {
+    "message": "利用規約"
+  },
+  "testFaucet": {
+    "message": "Test Faucet"
+  },
+  "thisWillAllow": {
+    "message": "これにより、$1で次のことが可能になります。",
+    "description": "$1は、許可を要求しているサイト/ dappの名前またはドメインです"
+  },
+  "thisWillAllowExternalExtension": {
+    "message": "これにより、ID $1の外部拡張が許可されます：",
+    "description": "$1は、Pantographに接続する別の拡張機能のIDであるランダムな文字列です"
+  },
+  "thisWillCreate": {
+    "message": "新しいウォレットとパスフレーズが作成されます。"
+  },
+  "tips": {
+    "message": "チップ"
+  },
+  "to": {
+    "message": ""
+  },
+  "toWithColon": {
+    "message": "に："
+  },
+  "toConnectWith": {
+    "message": "$1で接続するには",
+    "description": "$1は、Pantographとの接続を要求するサイト/ dappの名前またはドメインです"
+  },
+  "toETHviaShapeShift": {
+    "message": "ShapeShift経由でETHに1ドル、",
+    "description": "システムはメッセージの始めに預金タイプを記入します"
+  },
+  "token": {
+    "message": "トークン"
+  },
+  "tokenAlreadyAdded": {
+    "message": "トークンは既に追加されました"
+  },
+  "tokenContractAddress": {
+    "message": "トークンのコントラクトアドレス"
+  },
+  "tokenSymbol": {
+    "message": "トークンシンボル"
+  },
+  "total": {
+    "message": "合計"
+  },
+  "transaction": {
+    "message": "トランザクション"
+  },
+  "transactionConfirmed": {
+    "message": "取引は2ドルで確認されました。"
+  },
+  "transactionCreated": {
+    "message": "$2で$1の値で作成されたトランザクション。"
+  },
+  "transactionDropped": {
+    "message": "トランザクションは2ドルでドロップしました。"
+  },
+  "transactionSubmitted": {
+    "message": "ガス料金1ドル、2ドルで取引が送信されました。"
+  },
+  "transactionResubmitted": {
+    "message": "ガス料金で再送信されたトランザクションは、1ドルから2ドルに増加しました"
+  },
+  "transactionUpdated": {
+    "message": "トランザクションは2ドルで更新されました。"
+  },
+  "transactionErrored": {
+    "message": "トランザクションエラーが発生しました。"
+  },
+  "transactionCancelAttempted": {
+    "message": "$1のガス料金で$ 2の取引キャンセルが試行されました"
+  },
+  "transactionCancelSuccess": {
+    "message": "取引は2ドルでキャンセルされました"
+  },
+  "transactionError": {
+    "message": "トランザクションがエラーになっています"
+  },
+  "transactionErrorNoContract": {
+    "message": "コントラクトがないアドレスで関数を呼び出そうとしています"
+  },
+  "transactionFee": {
+    "message": "取引料"
+  },
+  "transactionTime": {
+    "message": "取引時間"
+  },
+  "transfer": {
+    "message": "送信"
+  },
+  "transferBetweenAccounts": {
+    "message": "アカウント間で送信"
+  },
+  "transferFrom": {
+    "message": "送信"
+  },
+  "troubleTokenBalances": {
+    "message": "トークン残高の読み込み中に問題が発生しました。リロードして下さい。",
+    "description": "トークン残高を表示する為のリンクをクリック"
+  },
+  "trustSiteApprovePermission": {
+    "message": "このサイトを信頼していますか？この許可を与えることで、$1が$ 2を引き出してトランザクションを自動化できるようになります。",
+    "description": "$1は許可を要求するURLであり、$ 2は要求の対象となる通貨の記号です。"
+  },
+  "tryAgain": {
+    "message": "再試行"
+  },
+  "typePassword": {
+    "message": "パンタグラフのパスワードを入力"
+  },
+  "unapproved": {
+    "message": "未承認"
+  },
+  "units": {
+    "message": "単位"
+  },
+  "unknown": {
+    "message": "不明"
+  },
+  "unknownNetwork": {
+    "message": "不明なプライベートネットワーク"
+  },
+  "unknownQrCode": {
+    "message": "エラー：そのQRコードを特定できません"
+  },
+  "unknownCameraErrorTitle": {
+    "message": "おっと！何かがうまくいかなかった...."
+  },
+  "unknownCameraError": {
+    "message": "カメラへのアクセスに失敗しました。もう一度お試しください..."
+  },
+  "unlimited": {
+    "message": "無制限"
+  },
+  "unlock": {
+    "message": "ログイン"
+  },
+  "unlockMessage": {
+    "message": "分散型ウェブが待っています"
+  },
+  "updatedWithDate": {
+    "message": "$1を更新"
+  },
+  "urlErrorMsg": {
+    "message": "URLには適切なHTTP/HTTPSが必要"
+  },
+  "urlExistsErrorMsg": {
+    "message": "既存のネットワークリストにURLが存在しています"
+  },
+  "usedByClients": {
+    "message": "様々なクライアントが使用"
+  },
+  "userName": {
+    "message": "ユーザー名"
+  },
+  "viewAccount": {
+    "message": "アカウントを見る"
+  },
+  "viewinExplorer": {
+    "message": "エクスプローラーで表示"
+  },
+  "viewContact": {
+    "message": "連絡先を表示"
+  },
+  "viewOnCustomBlockExplorer": {
+    "message": "1ドルで見る"
+  },
+  "viewOnEtherscan": {
+    "message": "TomoScanで表示"
+  },
+  "retryTransaction": {
+    "message": "トランザクションを再試行"
+  },
+  "visitWebSite": {
+    "message": "ようこそ！"
+  },
+  "walletSeed": {
+    "message": "ここにパスフレーズを入力"
+  },
+  "welcomeBack": {
+    "message": "始めましょう！"
+  },
+  "welcome": {
+    "message": "パンタグラフへようこそ"
+  },
+  "writePhrase": {
+    "message": "このパスフレーズを安全な場所に保管してください。 更に安全を求める場合なら、複数の紙に書き留め複数の場所に保管してください"
+  },
+  "yesLetsTry": {
+    "message": "Yes, let's try"
+  },
+  "youNeedToAllowCameraAccess": {
+    "message": "この機能を使用するにはカメラへのアクセス許可が必要です"
+  },
+  "yourSigRequested": {
+    "message": "署名を待っています"
+  },
+  "youSign": {
+    "message": "署名しています"
+  },
+  "yourPrivateSeedPhrase": {
+    "message": "あなたのプライベートパスフレーズ"
+  },
+  "zeroGasPriceOnSpeedUpError": {
+    "message": "スピードアップ時のガス代"
+  },
+  "tomo_mainnet": {
+    "message": "Main TomoChain Network"
+  },
+  "tomo_testnet": {
+    "message": "Test TomoChain Network"
+  },
+  "estimateGasError": {
+    "message": "gas required exceeds allowance or always failing transaction"
+  },
+  "transmissionFeeRequires": {
+    "message": "送信手数料に$1が必要な場合、最大量は送信できません。"
+  },
+  "privacyModeDefault": {
+    "message": "プライバシーモードがデフォルトで有効になりました"
+  },
+  "confirmClear": {
+    "message": "承認されたサイトを削除しますか？"
+  },
+  "connections": {
+    "message": "接続"
+  },
+  "connectionsSettingsDescription": {
+    "message": "Sites allowed to read your accounts"
+  },
+  "addSite": {
+    "message": "サイトを追加"
+  },
+  "addSiteDescription": {
+    "message": "あなたのアカウントへのアクセスするためにサイトを手動追加します。"
+  },
+  "connected": {
+    "message": "接続されているサイト"
+  },
+  "connectedDescription": {
+    "message": "あなたのアドレスへのアクセスが許可されているサイトのリストです。"
+  },
+  "clearApprovalData": {
+    "message": "すべてのサイトを削除"
+  },
+  "providerRequest": {
+    "message": "$1 はあなたのアカウントにアクセスしようとしています。"
+  },
+  "providerRequestInfo": {
+    "message": "下記のドメインは、TomoChainブロックチェーンとやり取りできるようにTomoChain APIへのアクセスをリクエストしようとしています。 Web3アクセスを承認する前に、正しいサイトにいることを常に確認してください。"
+  },
+  "balanceIsInsufficientGas": {
+    "message": "現在のガス総量に対して残高が不足しています"
+  },
+  "betweenMinAndMax": {
+    "message": " $1以上 $2以下にして下さい。",
+    "description": "helper for inputting hex as decimal input"
+  },
+  "gasLimitCalculation": {
+    "message": "ネットワークの成功率を基にして、ガスリミットを提案しています。"
+  },
+  "gasPriceCalculation": {
+    "message": "ネットワークの成功率を基にして、ガスプライスを提案しています。"
+  },
+  "greaterThanMin": {
+    "message": " $1以上にして下さい。",
+    "description": "helper for inputting hex as decimal input"
+  },
+  "lessThanMax": {
+    "message": " $1以下にして下さい。",
+    "description": "helper for inputting hex as decimal input"
+  },
+  "received": {
+    "message": "TOMOを受信"
+  }
+}

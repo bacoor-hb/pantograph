@@ -1,0 +1,31 @@
+.identicon {
+  /*rtl:ignore*/
+  direction: ltr;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  > div {
+    border-radius: 3px !important;
+  }
+  &__address-wrapper {
+    height: 32px;
+    width: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-radius: 3px;
+    border-width: 2px;
+    border-color: $curious-blue;
+    overflow: hidden;
+  }
+  &.rectangle > div {
+    width: auto;
+    height: auto;
+  }
+  &.mt4 {
+    margin-top: 4px;
+  }
+}
