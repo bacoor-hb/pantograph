@@ -240,6 +240,7 @@ var actions = {
   showAddSuggestedTokenPage,
   addToken,
   addTokens,
+  updateToken,
   removeToken,
   updateTokens,
   removeSuggestedTokens,
@@ -1694,11 +1695,28 @@ function showAddSuggestedTokenPage (transitionForward = true) {
   }
 }
 
-function addToken (address, symbol, decimals, image) {
+function addToken (address, symbol, decimals, image, type) {
   return (dispatch) => {
     dispatch(actions.showLoadingIndication())
     return new Promise((resolve, reject) => {
-      background.addToken(address, symbol, decimals, image, (err, tokens) => {
+      background.addToken(address, symbol, decimals, image, type, (err, tokens) => {
+        dispatch(actions.hideLoadingIndication())
+        if (err) {
+          dispatch(actions.displayWarning(err.message))
+          return reject(err)
+        }
+        dispatch(actions.updateTokens(tokens))
+        resolve(tokens)
+      })
+    })
+  }
+}
+
+function updateToken (address, symbol, decimals, image, type) {
+  return (dispatch) => {
+    dispatch(actions.showLoadingIndication())
+    return new Promise((resolve, reject) => {
+      background.updateToken(address, symbol, decimals, image, type, (err, tokens) => {
         dispatch(actions.hideLoadingIndication())
         if (err) {
           dispatch(actions.displayWarning(err.message))

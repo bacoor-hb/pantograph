@@ -497,6 +497,7 @@ module.exports = class MetamaskController extends EventEmitter {
       setSelectedAddress: nodeify(preferencesController.setSelectedAddress, preferencesController),
       addToken: nodeify(preferencesController.addToken, preferencesController),
       removeToken: nodeify(preferencesController.removeToken, preferencesController),
+      updateToken: nodeify(preferencesController.updateToken, preferencesController),
       removeSuggestedTokens: nodeify(preferencesController.removeSuggestedTokens, preferencesController),
       setCurrentAccountTab: nodeify(preferencesController.setCurrentAccountTab, preferencesController),
       setAccountLabel: nodeify(preferencesController.setAccountLabel, preferencesController),
