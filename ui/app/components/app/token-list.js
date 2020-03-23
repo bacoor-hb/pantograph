@@ -26,7 +26,8 @@ function mapStateToProps (state) {
 
 function mapDispatchToProps (dispatch) {
   return {
-    addToken: ({ address, symbol, decimals, image }) => dispatch(actions.addToken(address, symbol, Number(decimals), image)),
+    addToken: ({ address, symbol, decimals, image, type }) => dispatch(actions.addToken(address, symbol, Number(decimals), image, type)),
+    updateToken: ({ address, symbol, decimals, image, type }) => dispatch(actions.updateToken(address, symbol, Number(decimals), image, type)),
   }
 }
 
@@ -188,14 +189,16 @@ TokenList.prototype.getHolderTokens = function () {
       let prefix = prefixForNetwork(this.props.network)
       fetch(`https://${prefix}tomochain.com/api/tokens?holder=${this.props.userAddress}`)
         .then(async (response) => {
-          const tokensToDetect = await response.json()
+          let tokensToDetect = await response.json()
           if (tokensToDetect && tokensToDetect.length > 0) {
-            tokensToDetect.map((token, index) => {
+            tokensToDetect = tokensToDetect.map((token, index) => {
               const previousEntry = this.props.tokens.find((e) => {
                 return e.address === token.address
               })
               if (!previousEntry) {
                 this.props.addToken(token)
+              } else {
+                this.props.updateToken(token)
               }
             })
           }

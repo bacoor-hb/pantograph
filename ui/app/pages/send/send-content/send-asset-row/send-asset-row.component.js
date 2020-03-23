@@ -126,6 +126,12 @@ export default class SendAssetRow extends Component {
   renderAsset (token) {
     const { address, symbol } = token
     const { t } = this.context
+    const { tokens } = this.props
+    let assetImage
+    let tokenFind = tokens.find(e => e.address.toLowerCase() === address.toLowerCase())
+    if (tokenFind && tokenFind.type) {
+      assetImage = `images/tokens/${tokenFind.type}.png`
+    }
 
     return (
       <div
@@ -133,7 +139,7 @@ export default class SendAssetRow extends Component {
         onClick={() => this.selectToken(address)}
       >
         <div className="send-v2__asset-dropdown__asset-icon">
-          <Identicon address={address} diameter={36} />
+          <Identicon address={address} diameter={36} wDiameter={36} image={assetImage}/>
         </div>
         <div className="send-v2__asset-dropdown__asset-data">
           <div className="send-v2__asset-dropdown__symbol">

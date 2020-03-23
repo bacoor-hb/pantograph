@@ -13,6 +13,7 @@ const TokenMenuDropdown = require('./dropdowns/token-menu-dropdown.js')
 
 function mapStateToProps (state) {
   return {
+    tokens: state.metamask.tokens,
     network: state.metamask.network,
     currentCurrency: state.metamask.currentCurrency,
     selectedTokenAddress: state.metamask.selectedTokenAddress,
@@ -49,6 +50,7 @@ TokenCell.prototype.render = function () {
   const { tokenMenuOpen } = this.state
   const props = this.props
   const {
+    tokens,
     address,
     symbol,
     string,
@@ -85,7 +87,11 @@ TokenCell.prototype.render = function () {
   }
 
   const showFiat = Boolean(currentTokenInFiat) && currentCurrency.toUpperCase() !== symbol
-
+  let tokenImage
+  let tokenFind = tokens.find(e => e.address.toLowerCase() === address.toLowerCase())
+  if (tokenFind && tokenFind.type) {
+    tokenImage = `images/tokens/${tokenFind.type}.png`
+  }
   return (
     h('div.token-list-item', {
       className: `token-list-item ${selectedTokenAddress === address ? 'token-list-item--active' : ''}`,
@@ -109,7 +115,7 @@ TokenCell.prototype.render = function () {
         diameter: 50,
         address,
         network,
-        image,
+        image: image || tokenImage,
       }),
 
       h('div.token-list-item__balance-ellipsis', null, [
