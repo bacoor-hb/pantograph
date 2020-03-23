@@ -10,6 +10,9 @@ import {
   convertSmallNumberToRegular
 } from '../../helpers/utils/confirm-tx.util'
 import { getWeiHexFromDecimalValue } from '../../helpers/utils/conversions.util'
+import {
+  fetchTokenIssuer
+} from '../send/send.utils'
 import { ETH, PRIMARY } from '../../helpers/constants/common'
 
 export default class ConfirmTokenTransactionBase extends Component {
@@ -27,11 +30,23 @@ export default class ConfirmTokenTransactionBase extends Component {
     contractExchangeRate: PropTypes.number,
     conversionRate: PropTypes.number,
     currentCurrency: PropTypes.string,
-    tokenIssuer: PropTypes.object
+    tokenIssuer: PropTypes.object,
+    setTokenIssuer: PropTypes.func,
+    network: PropTypes.string,
   }
 
   static defaultProps = {
     tokenAmount: 0,
+  }
+
+  componentDidMount () {
+    const { tokenAddress, setTokenIssuer, network } = this.props
+    if (tokenAddress) {
+      fetchTokenIssuer(tokenAddress, network)
+        .then((res) => {
+          setTokenIssuer(res)
+        })
+    }
   }
 
   getFiatTransactionAmount () {

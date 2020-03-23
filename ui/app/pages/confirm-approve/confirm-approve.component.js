@@ -6,6 +6,9 @@ import { getCustomTxParamsData } from './confirm-approve.util'
 import {
   calcTokenAmount,
 } from '../../helpers/utils/token-util'
+import {
+  fetchTokenIssuer
+} from '../send/send.utils'
 
 export default class ConfirmApprove extends Component {
   static contextTypes = {
@@ -30,6 +33,9 @@ export default class ConfirmApprove extends Component {
     data: PropTypes.string,
     decimals: PropTypes.number,
     txData: PropTypes.object,
+    tokenIssuer: PropTypes.object,
+    setTokenIssuer: PropTypes.func,
+    network: PropTypes.string,
   }
 
   static defaultProps = {
@@ -38,6 +44,16 @@ export default class ConfirmApprove extends Component {
 
   state = {
     customPermissionAmount: '',
+  }
+
+  componentDidMount () {
+    const { tokenAddress, setTokenIssuer, network } = this.props
+    if (tokenAddress) {
+      fetchTokenIssuer(tokenAddress, network)
+        .then((res) => {
+          setTokenIssuer(res)
+        })
+    }
   }
 
   componentDidUpdate (prevProps) {
@@ -65,6 +81,7 @@ export default class ConfirmApprove extends Component {
       currentCurrency,
       ethTransactionTotal,
       fiatTransactionTotal,
+      tokenIssuer,
       ...restProps
     } = this.props
     const { customPermissionAmount } = this.state
@@ -104,6 +121,7 @@ export default class ConfirmApprove extends Component {
           currentCurrency={currentCurrency}
           ethTransactionTotal={ethTransactionTotal}
           fiatTransactionTotal={fiatTransactionTotal}
+          tokenIssuer={tokenIssuer}
         />}
         hideSenderToRecipient
         customTxParamsData={customData}

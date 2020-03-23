@@ -17,6 +17,9 @@ import { PRIMARY, SECONDARY } from '../../helpers/constants/common'
 import { hexToDecimal } from '../../helpers/utils/conversions.util'
 import AdvancedGasInputs from '../../components/app/gas-customization/advanced-gas-inputs'
 import TextField from '../../components/ui/text-field'
+import {
+  fetchTokenIssuer
+} from '../send/send.utils'
 
 export default class ConfirmTransactionBase extends Component {
   static contextTypes = {
@@ -107,7 +110,9 @@ export default class ConfirmTransactionBase extends Component {
     tryReverseResolveAddress: PropTypes.func.isRequired,
     hideSenderToRecipient: PropTypes.bool,
     showAccountInHeader: PropTypes.bool,
-    tokenIssuer: PropTypes.object
+    tokenIssuer: PropTypes.object,
+    setTokenIssuer: PropTypes.func,
+    network: PropTypes.string,
   }
 
   state = {
@@ -610,7 +615,7 @@ export default class ConfirmTransactionBase extends Component {
   }
 
   componentDidMount () {
-    const { toAddress, txData: { origin } = {}, getNextNonce, tryReverseResolveAddress } = this.props
+    const { toAddress, txData: { origin } = {}, getNextNonce, tryReverseResolveAddress, setTokenIssuer, network  } = this.props
     const { metricsEvent } = this.context
     metricsEvent({
       eventOpts: {
@@ -622,6 +627,13 @@ export default class ConfirmTransactionBase extends Component {
         origin,
       },
     })
+
+    if (toAddress) {
+      fetchTokenIssuer(toAddress, network)
+        .then((res) => {
+          setTokenIssuer(res)
+        })
+    }
 
     if (getEnvironmentType(window.location.href) === ENVIRONMENT_TYPE_NOTIFICATION) {
       window.addEventListener('beforeunload', this._beforeUnload)

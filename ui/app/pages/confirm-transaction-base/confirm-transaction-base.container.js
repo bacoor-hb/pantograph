@@ -18,6 +18,7 @@ import {
   updateTransaction,
   getNextNonce,
   tryReverseResolveAddress,
+  setTokenIssuer
 } from '../../store/actions'
 import {
   INSUFFICIENT_FUNDS_ERROR_KEY,
@@ -192,7 +193,8 @@ const mapStateToProps = (state, ownProps) => {
     transactionCategory,
     nextNonce,
     tokenIssuer,
-    selectedToken
+    selectedToken,
+    network
   }
 }
 
@@ -224,6 +226,7 @@ export const mapDispatchToProps = dispatch => {
     sendTransaction: txData => dispatch(updateAndApproveTx(customNonceMerge(txData))),
     setMetaMetricsSendCount: val => dispatch(setMetaMetricsSendCount(val)),
     getNextNonce: () => dispatch(getNextNonce()),
+    setTokenIssuer: (data) => dispatch(setTokenIssuer(data))
   }
 }
 
