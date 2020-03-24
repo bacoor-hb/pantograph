@@ -11,8 +11,10 @@ import {
   isBalanceCached,
   preferencesSelector,
   getIsMainnet,
+  getContractMetaData
 } from '../../../selectors/selectors'
 import { showModal } from '../../../store/actions'
+import { checksumAddress }from '../../../helpers/utils/util'
 
 const mapStateToProps = state => {
   const { showFiatInTestnets } = preferencesSelector(state)
@@ -24,11 +26,16 @@ const mapStateToProps = state => {
   const account = accounts[selectedAddress]
   const { balance } = account
   const tokens = state.metamask.tokens
+  const contractMetaData = getContractMetaData(state)
   let assetImage = getSelectedTokenAssetImage(state)
-  if (selectedToken) {
-    let tokenFind = tokens.find(e => e.address.toLowerCase() === selectedToken.address.toLowerCase())
-    if (tokenFind && tokenFind.type) {
-      assetImage = `images/tokens/${tokenFind.type}.png`
+  if (!assetImage && selectedToken) {
+    const checksummedAddress = checksumAddress(selectedToken.address)
+    assetImage = contractMetaData[checksummedAddress.toLowerCase()] ? contractMetaData[checksummedAddress.toLowerCase()].icon_image : null
+    if (!assetImage) {
+      let tokenFind = tokens.find(e => e.address.toLowerCase() === checksummedAddress.toLowerCase())
+      if (tokenFind && tokenFind.type) {
+        assetImage = `images/tokens/${tokenFind.type}.png`
+      }
     }
   }
 

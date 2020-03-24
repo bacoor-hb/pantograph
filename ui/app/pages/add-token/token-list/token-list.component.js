@@ -30,10 +30,10 @@ export default class InfoBox extends Component {
             {
               Array(6).fill(undefined)
                 .map((_, i) => {
-                  const { logo, symbol, name, address } = results[i] || {}
+                  const { icon_image, symbol, name, address } = results[i] || {}
                   const tokenAlreadyAdded = checkExistingAddresses(address, tokens)
 
-                  return Boolean(logo || symbol || name) && (
+                  return Boolean(icon_image || symbol || name) && (
                     <div
                       className={classnames('token-list__token', {
                         'token-list__token--selected': selectedTokens[address],
@@ -44,7 +44,7 @@ export default class InfoBox extends Component {
                     >
                       <div
                         className="token-list__token-icon"
-                        style={{ backgroundImage: logo && `url(images/contract/${logo})` }}>
+                        style={{ backgroundImage: icon_image && `url(${icon_image})` }}>
                       </div>
                       <div className="token-list__token-data">
                         <span className="token-list__token-name">{ `${name} (${symbol})` }</span>

@@ -8,6 +8,7 @@ import log from 'loglevel'
 import IdleTimer from 'react-idle-timer'
 import {getNetworkIdentifier, preferencesSelector} from '../../selectors/selectors'
 import classnames from 'classnames'
+import { fetchContractMetaData } from '../../helpers/utils/token-util'
 
 // init
 import FirstTimeFlow from '../first-time-flow'
@@ -77,11 +78,17 @@ import {
 
 class Routes extends Component {
   componentWillMount () {
-    const { currentCurrency, setCurrentCurrencyToUSD } = this.props
+    const { currentCurrency, setCurrentCurrencyToUSD, setContractMetaData, network } = this.props
 
     if (!currentCurrency) {
       setCurrentCurrencyToUSD()
     }
+
+    // fetch list of contract metadata
+    fetchContractMetaData(network)
+      .then((metadata) => {
+        setContractMetaData(metadata)
+      })
 
     this.props.history.listen((locationObj, action) => {
       if (action === 'PUSH') {
@@ -356,6 +363,7 @@ Routes.propTypes = {
   providerId: PropTypes.string,
   providerRequests: PropTypes.array,
   autoLogoutTimeLimit: PropTypes.number,
+  setContractMetaData: PropTypes.func
 }
 
 function mapStateToProps (state) {
@@ -399,6 +407,7 @@ function mapDispatchToProps (dispatch) {
     setCurrentCurrencyToUSD: () => dispatch(actions.setCurrentCurrency('usd')),
     setMouseUserState: (isMouseUser) => dispatch(actions.setMouseUserState(isMouseUser)),
     setLastActiveTime: () => dispatch(actions.setLastActiveTime()),
+    setContractMetaData: (data) => dispatch(actions.setContractMetaData(data))
   }
 }
 

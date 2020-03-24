@@ -2,6 +2,7 @@ const log = require('loglevel')
 const util = require('./util')
 const BigNumber = require('bignumber.js')
 import contractMap from 'eth-contract-metadata'
+import { resolve } from 'any-promise'
 
 const casedContractMap = Object.keys(contractMap).reduce((acc, base) => {
   return {
@@ -141,4 +142,42 @@ export function getTokenValue (tokenParams = []) {
 export function getTokenToAddress (tokenParams = []) {
   const toAddressData = tokenParams.find(param => param.name === '_to')
   return toAddressData ? toAddressData.value : tokenParams[0].value
+}
+
+const prefixForNetwork = (network) => {
+  const net = parseInt(network)
+  let prefix
+  switch (net) {
+    case 88: // main net
+      prefix = 'api'
+      break
+    case 89: // test net
+      prefix = 'api-dev'
+      break
+    default:
+      prefix = ''
+  }
+  return prefix
+}
+
+export function fetchContractMetaData (network) {
+  return new Promise(async (resolve, reject) => {
+    let prefix = prefixForNetwork(network)
+    fetch(`https://deblo-${prefix}.pantograph.app/token-prices`)
+      .then(async (response) => {
+        let tokensToDetect = await response.json()
+        if (tokensToDetect && Array.isArray(tokensToDetect)) {
+          tokensToDetect = tokensToDetect.filter(e => e.isActive)
+          let tokens = []
+          tokensToDetect.map((token, index) => {
+            tokens[token.address.toLowerCase()] = token
+          })
+          resolve(tokens)
+        }
+        resolve([])
+      })
+      .catch(err => {
+        reject(err)
+      })
+  })
 }

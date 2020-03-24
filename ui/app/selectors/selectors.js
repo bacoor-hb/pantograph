@@ -57,7 +57,8 @@ const selectors = {
   getAddressBookEntry,
   getAddressBookEntryName,
   getFeatureFlags,
-  isTomoChainNetwork
+  isTomoChainNetwork,
+  getContractMetaData
 }
 
 module.exports = selectors
@@ -395,4 +396,8 @@ function getKnownMethodData (state, data) {
 
 function getFeatureFlags (state) {
   return state.metamask.featureFlags
+}
+
+function getContractMetaData (state) {
+  return state.metamask.contractMetaData
 }

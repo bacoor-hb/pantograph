@@ -10,6 +10,7 @@ function mapStateToProps (state) {
     selectedTokenAddress: state.metamask.selectedTokenAddress,
     accounts: getMetaMaskAccounts(state),
     nativeCurrency: state.metamask.nativeCurrency,
+    contractMetaData: state.metamask.contractMetaData
   }
 }
 

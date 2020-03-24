@@ -5,6 +5,7 @@ import Identicon from '../../../../components/ui/identicon/identicon.component'
 import TokenBalance from '../../../../components/ui/token-balance'
 import UserPreferencedCurrencyDisplay from '../../../../components/app/user-preferenced-currency-display'
 import {PRIMARY} from '../../../../helpers/constants/common'
+import { checksumAddress }from '../../../../helpers/utils/util'
 
 export default class SendAssetRow extends Component {
   static propTypes = {
@@ -20,6 +21,7 @@ export default class SendAssetRow extends Component {
     selectedTokenAddress: PropTypes.string,
     setSelectedToken: PropTypes.func.isRequired,
     nativeCurrency: PropTypes.string.isRequired,
+    contractMetaData: PropTypes.array
   }
 
   static contextTypes = {
@@ -126,11 +128,15 @@ export default class SendAssetRow extends Component {
   renderAsset (token) {
     const { address, symbol } = token
     const { t } = this.context
-    const { tokens } = this.props
+    const { tokens, contractMetaData } = this.props
     let assetImage
-    let tokenFind = tokens.find(e => e.address.toLowerCase() === address.toLowerCase())
-    if (tokenFind && tokenFind.type) {
-      assetImage = `images/tokens/${tokenFind.type}.png`
+    const checksummedAddress = checksumAddress(address)
+    assetImage = contractMetaData[checksummedAddress.toLowerCase()] ? contractMetaData[checksummedAddress.toLowerCase()].icon_image : null
+    if (!assetImage) {
+      let tokenFind = tokens.find(e => e.address.toLowerCase() === checksummedAddress)
+      if (tokenFind && tokenFind.type) {
+        assetImage = `images/tokens/${tokenFind.type}.png`
+      }
     }
 
     return (

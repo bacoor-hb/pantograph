@@ -5,23 +5,6 @@ import Fuse from 'fuse.js'
 import InputAdornment from '@material-ui/core/InputAdornment'
 import TextField from '../../../components/ui/text-field'
 
-const contractList = Object.entries(contractMap)
-  .map(([ _, tokenData]) => tokenData)
-  .filter(tokenData => Boolean(tokenData.erc20))
-
-const fuse = new Fuse(contractList, {
-  shouldSort: true,
-  threshold: 0.45,
-  location: 0,
-  distance: 100,
-  maxPatternLength: 32,
-  minMatchCharLength: 1,
-  keys: [
-    { name: 'name', weight: 0.5 },
-    { name: 'symbol', weight: 0.5 },
-  ],
-})
-
 export default class TokenSearch extends Component {
   static contextTypes = {
     t: PropTypes.func,
@@ -32,6 +15,7 @@ export default class TokenSearch extends Component {
   }
 
   static propTypes = {
+    contractMetaData: PropTypes.array,
     onSearch: PropTypes.func,
     error: PropTypes.string,
   }
@@ -45,6 +29,22 @@ export default class TokenSearch extends Component {
   }
 
   handleSearch (searchQuery) {
+    const { contractMetaData } = this.props
+    const contractList = Object.entries(contractMetaData)
+    .map(([ _, tokenData]) => tokenData)
+    .filter(tokenData => tokenData.address !== '')
+    const fuse = new Fuse(contractList, {
+      shouldSort: true,
+      threshold: 0.45,
+      location: 0,
+      distance: 100,
+      maxPatternLength: 32,
+      minMatchCharLength: 1,
+      keys: [
+        { name: 'name', weight: 0.5 },
+        { name: 'symbol', weight: 0.5 },
+      ],
+    })
     this.setState({ searchQuery })
     const fuseSearchResult = fuse.search(searchQuery)
     const addressSearchResult = contractList.filter(token => {

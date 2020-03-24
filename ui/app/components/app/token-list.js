@@ -9,6 +9,7 @@ const selectors = require('../../selectors/selectors')
 const log = require('loglevel')
 const prefixForNetwork = require('../../../lib/tomochain-prefix-for-api')
 const actions = require('../../store/actions')
+const { checksumAddress } = require('../../helpers/utils/util')
 
 function mapStateToProps (state) {
   return {
@@ -21,6 +22,7 @@ function mapStateToProps (state) {
     nativeCurrency: state.metamask.nativeCurrency,
     currentCurrency: state.metamask.currentCurrency,
     conversionRate: state.metamask.conversionRate,
+    contractMetaData: state.metamask.contractMetaData
   }
 }
 
@@ -59,7 +61,7 @@ function TokenList () {
 }
 
 TokenList.prototype.render = function () {
-  const { userAddress, assetImages } = this.props
+  const { userAddress, assetImages, contractMetaData } = this.props
   const state = this.state
   const { tokens, isLoading, error } = state
   if (isLoading) {
@@ -78,7 +80,9 @@ TokenList.prototype.render = function () {
   }
 
   return h('div', tokens.map((tokenData) => {
-    tokenData.image = assetImages[tokenData.address]
+    const checksummedAddress = checksumAddress(tokenData.address)
+    tokenData.image = contractMetaData[checksummedAddress.toLowerCase()] ? contractMetaData[checksummedAddress.toLowerCase()].icon_image : null
+    // tokenData.image = assetImages[tokenData.address]
     return h(TokenCell, tokenData)
   }))
 
