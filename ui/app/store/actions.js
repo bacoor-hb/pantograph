@@ -398,6 +398,8 @@ var actions = {
   setTokenIssuer,
   SET_TOKEN_ISSUER: 'SET_TOKEN_ISSUER',
   tryReverseResolveAddress,
+  setContractMetaData,
+  SET_CONTRACT_META_DATA: 'SET_CONTRACT_META_DATA'
 }
 
 module.exports = actions
@@ -3005,5 +3007,12 @@ function setTokenIssuer (tokenIssuer) {
   return {
     type: actions.SET_TOKEN_ISSUER,
     value: tokenIssuer,
+  }
+}
+
+function setContractMetaData (contractMetaData) {
+  return {
+    type: actions.SET_CONTRACT_META_DATA,
+    value: contractMetaData,
   }
 }
