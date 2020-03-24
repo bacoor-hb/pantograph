@@ -1049,7 +1049,7 @@
     "message": "單詞之間請用空白分隔"
   },
   "seedPhraseReq": {
-    "message": "助憶詞為 12 個詞語"
+    "message": "助憶詞為 12,15,18,21,24 個詞語"
   },
   "selectCurrency": {
     "message": "選擇幣別"

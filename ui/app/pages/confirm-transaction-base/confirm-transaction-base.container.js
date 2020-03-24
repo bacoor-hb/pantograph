@@ -60,11 +60,14 @@ const mapStateToProps = (state, ownProps) => {
     currentCurrency,
     selectedAddress,
     selectedAddressTxList,
+    selectedTokenAddress,
     assetImages,
     network,
     unapprovedTxs,
     metaMetricsSendCount,
     nextNonce,
+    tokens,
+    contractMetaData
   } = metamask
   const {
     tokenData,
@@ -85,7 +88,17 @@ const mapStateToProps = (state, ownProps) => {
     data,
   } = transaction && transaction.txParams || txParams
   const accounts = getMetaMaskAccounts(state)
-  const assetImage = assetImages[txParamsToAddress]
+  let assetImage = assetImages[txParamsToAddress]
+  if (!assetImage && selectedTokenAddress) {
+    const checksummedAddress = checksumAddress(selectedTokenAddress)
+    assetImage = contractMetaData[checksummedAddress.toLowerCase()] ? contractMetaData[checksummedAddress.toLowerCase()].icon_image : null
+    if (!assetImage) {
+      let tokenFind = tokens.find(e => e.address.toLowerCase() === checksummedAddress.toLowerCase())
+      if (tokenFind && tokenFind.type) {
+        assetImage = `images/tokens/${tokenFind.type}.png`
+      }
+    }
+  }
 
   const { balance } = accounts[selectedAddress]
   const { name: fromName } = identities[selectedAddress]

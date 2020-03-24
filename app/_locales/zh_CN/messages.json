@@ -1049,7 +1049,7 @@
     "message": "用空格分隔每个单词"
   },
   "seedPhraseReq": {
-    "message": "助记词为12个单词"
+    "message": "助记词为12,15,18,21,24个单词"
   },
   "selectCurrency": {
     "message": "选择货币"
