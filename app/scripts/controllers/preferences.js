@@ -422,7 +422,7 @@ class PreferencesController {
 
     if (previousEntry) {
       tokens[previousIndex] = newEntry
-      tokens.isHidden = false
+      tokens[previousIndex].isHidden = false
     } else {
       tokens.push(newEntry)
     }
@@ -443,6 +443,7 @@ class PreferencesController {
 
     if (previousEntry) {
       tokens[previousIndex] = newEntry
+      tokens[previousIndex].isHidden = previousEntry.isHidden
     }
     assetImages[address] = image
     this._updateAccountTokens(tokens, assetImages)
