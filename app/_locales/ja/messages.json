@@ -1690,5 +1690,8 @@
   },
   "received": {
     "message": "TOMOを受信"
+  },
+  "staking": {
+    "message": "預ける"
   }
 }

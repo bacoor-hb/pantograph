@@ -1406,5 +1406,8 @@
   },
   "received": {
     "message": "TOMO收到"
+  },
+  "staking": {
+    "message": "委托"
   }
 }

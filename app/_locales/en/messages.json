@@ -1590,5 +1590,8 @@
   },
   "received": {
     "message": "TOMO recieved"
+  },
+  "staking": {
+    "message": "Staking"
   }
 }

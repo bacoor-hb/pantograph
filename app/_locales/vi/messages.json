@@ -111,7 +111,7 @@
     "message": "Mạng lưới mặc định dùng cho các giao dịch TomoChain là Main Net (tiền TOMO thật)."
   },
   "deposit": {
-    "message": "Ký gửi/nạp tiền"
+    "message": "Ký gửi"
   },
   "depositEther": {
     "message": "Ký gửi Tomo"

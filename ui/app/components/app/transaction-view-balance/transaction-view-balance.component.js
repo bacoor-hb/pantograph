@@ -30,6 +30,10 @@ export default class TransactionViewBalance extends PureComponent {
     showFiat: true,
   }
 
+  goToNewTab = (url) => {
+    window.open(url)
+  }
+
   renderBalance () {
     const { selectedToken, balance, balanceIsCached, showFiat } = this.props
 
@@ -119,6 +123,22 @@ export default class TransactionViewBalance extends PureComponent {
           }}
         >
           { t('send') }
+        </Button>
+        <Button
+          type="secondary"
+          className="transaction-view-balance__button"
+          onClick={() => {
+            metricsEvent({
+              eventOpts: {
+                category: 'Navigation',
+                action: 'Home',
+                name: 'Clicked Staking',
+              },
+            })
+            this.goToNewTab('https://master.tomochain.com/')
+          }}
+        >
+          { t('staking') }
         </Button>
       </div>
     )

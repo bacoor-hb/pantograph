@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   flex: 1;
-  height: 54px;
+  // height: 54px;
   min-width: 0;
 
   @media screen and (max-width: $break-small) {
@@ -79,20 +79,22 @@
   }
 
   &__buttons {
-    display: flex;
-    flex-direction: row;
+    width: 225px;
 
     @media screen and (max-width: $break-small) {
       margin-bottom: 16px;
+      width: auto;
     }
   }
 
   &__button {
     min-width: initial;
     width: 100px;
+    float: left;
+    margin: 6px;
 
     &:not(:last-child) {
-      margin-right: 12px;
+      // margin-right: 12px;
     }
   }
 }
