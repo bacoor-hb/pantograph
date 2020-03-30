@@ -5,7 +5,7 @@ import {
   contractExchangeRateSelector,
   transactionFeeSelector,
 } from '../../selectors/confirm-transaction'
-import { showModal } from '../../store/actions'
+import { showModal, setTokenIssuer } from '../../store/actions'
 import { tokenSelector } from '../../selectors/tokens'
 import {
   getTokenData,
@@ -16,6 +16,10 @@ import {
   getTokenToAddress,
   getTokenValue,
 } from '../../helpers/utils/token-util'
+import {
+  getCurrentNetwork,
+  getTokenIssuer
+} from '../send/send.selectors'
 import ConfirmApprove from './confirm-approve.component'
 
 const mapStateToProps = (state, ownProps) => {
@@ -45,6 +49,8 @@ const mapStateToProps = (state, ownProps) => {
   const toAddress = tokenData && getTokenToAddress(tokenData.params)
   const tokenAmount = tokenData && calcTokenAmount(tokenValue, decimals).toString(10)
   const contractExchangeRate = contractExchangeRateSelector(state)
+  const tokenIssuer = getTokenIssuer(state)
+  const network = getCurrentNetwork(state)
 
   const { origin } = transaction
   const formattedOrigin = origin
@@ -69,6 +75,8 @@ const mapStateToProps = (state, ownProps) => {
     data,
     decimals: Number(decimals),
     txData: transaction,
+    tokenIssuer,
+    network
   }
 }
 
@@ -93,6 +101,7 @@ const mapDispatchToProps = (dispatch) => {
       tokenBalance,
       tokenSymbol,
     })),
+    setTokenIssuer: (data) => dispatch(setTokenIssuer(data))
   }
 }
 

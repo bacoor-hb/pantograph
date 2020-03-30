@@ -10,7 +10,7 @@ import { tokenSelector } from '../../selectors/tokens'
 import {
   getTokenData,
 } from '../../helpers/utils/transactions.util'
-import { getTokenIssuer } from '../send/send.selectors'
+import { getTokenIssuer, getCurrentNetwork } from '../send/send.selectors'
 import {
   calcTokenAmount,
   getTokenToAddress,
@@ -43,6 +43,7 @@ const mapStateToProps = (state, ownProps) => {
   const tokenAmount = tokenData && calcTokenAmount(tokenValue, decimals).toNumber()
   const contractExchangeRate = contractExchangeRateSelector(state)
   const tokenIssuer = getTokenIssuer(state)
+  const network = getCurrentNetwork(state)
 
   return {
     toAddress,
@@ -54,11 +55,18 @@ const mapStateToProps = (state, ownProps) => {
     contractExchangeRate,
     fiatTransactionTotal,
     ethTransactionTotal,
-    tokenIssuer
+    tokenIssuer,
+    network
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    setTokenIssuer: (data) => dispatch(setTokenIssuer(data))
   }
 }
 
 export default compose(
   withRouter,
-  connect(mapStateToProps)
+  connect(mapStateToProps, mapDispatchToProps)
 )(ConfirmTokenTransactionBase)

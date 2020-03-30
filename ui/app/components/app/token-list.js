@@ -9,6 +9,7 @@ const selectors = require('../../selectors/selectors')
 const log = require('loglevel')
 const prefixForNetwork = require('../../../lib/tomochain-prefix-for-api')
 const actions = require('../../store/actions')
+const { checksumAddress } = require('../../helpers/utils/util')
 
 function mapStateToProps (state) {
   return {
@@ -21,12 +22,14 @@ function mapStateToProps (state) {
     nativeCurrency: state.metamask.nativeCurrency,
     currentCurrency: state.metamask.currentCurrency,
     conversionRate: state.metamask.conversionRate,
+    contractMetaData: state.metamask.contractMetaData
   }
 }
 
 function mapDispatchToProps (dispatch) {
   return {
-    addToken: ({ address, symbol, decimals, image }) => dispatch(actions.addToken(address, symbol, Number(decimals), image)),
+    addToken: ({ address, symbol, decimals, image, type }) => dispatch(actions.addToken(address, symbol, Number(decimals), image, type)),
+    updateToken: ({ address, symbol, decimals, image, type }) => dispatch(actions.updateToken(address, symbol, Number(decimals), image, type)),
   }
 }
 
@@ -58,7 +61,7 @@ function TokenList () {
 }
 
 TokenList.prototype.render = function () {
-  const { userAddress, assetImages } = this.props
+  const { userAddress, assetImages, contractMetaData } = this.props
   const state = this.state
   const { tokens, isLoading, error } = state
   if (isLoading) {
@@ -77,7 +80,9 @@ TokenList.prototype.render = function () {
   }
 
   return h('div', tokens.map((tokenData) => {
-    tokenData.image = assetImages[tokenData.address]
+    const checksummedAddress = checksumAddress(tokenData.address)
+    tokenData.image = contractMetaData[checksummedAddress.toLowerCase()] ? contractMetaData[checksummedAddress.toLowerCase()].icon_image : null
+    // tokenData.image = assetImages[tokenData.address]
     return h(TokenCell, tokenData)
   }))
 
@@ -188,14 +193,16 @@ TokenList.prototype.getHolderTokens = function () {
       let prefix = prefixForNetwork(this.props.network)
       fetch(`https://${prefix}tomochain.com/api/tokens?holder=${this.props.userAddress}`)
         .then(async (response) => {
-          const tokensToDetect = await response.json()
+          let tokensToDetect = await response.json()
           if (tokensToDetect && tokensToDetect.length > 0) {
-            tokensToDetect.map((token, index) => {
+            tokensToDetect = tokensToDetect.map((token, index) => {
               const previousEntry = this.props.tokens.find((e) => {
                 return e.address === token.address
               })
               if (!previousEntry) {
                 this.props.addToken(token)
+              } else {
+                this.props.updateToken(token)
               }
             })
           }

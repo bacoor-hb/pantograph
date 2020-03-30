@@ -62,7 +62,8 @@ function reduceMetamask (state, action) {
     tokenIssuer: {
       issuerAddress: '',
       feeFund: 0
-    }
+    },
+    contractMetaData: []
   }, state.metamask)
 
   switch (action.type) {
@@ -435,8 +436,15 @@ function reduceMetamask (state, action) {
       })
     }
 
+    case actions.SET_CONTRACT_META_DATA: {
+      return extend(metamaskState, {
+        contractMetaData: action.value,
+      })
+    }
+
     default:
       return metamaskState
 
   }
 }
+

@@ -410,9 +410,9 @@ class PreferencesController {
    * @returns {Promise<array>} Promises the new array of AddedToken objects.
    *
    */
-  async addToken (rawAddress, symbol, decimals, image) {
+  async addToken (rawAddress, symbol, decimals, image, type) {
     const address = normalizeAddress(rawAddress)
-    const newEntry = { address, symbol, decimals }
+    const newEntry = { address, symbol, decimals, type }
     const tokens = this.store.getState().tokens
     const assetImages = this.getAssetImages()
     const previousEntry = tokens.find((token) => {
@@ -422,9 +422,28 @@ class PreferencesController {
 
     if (previousEntry) {
       tokens[previousIndex] = newEntry
-      tokens.isHidden = false
+      tokens[previousIndex].isHidden = false
     } else {
       tokens.push(newEntry)
+    }
+    assetImages[address] = image
+    this._updateAccountTokens(tokens, assetImages)
+    return Promise.resolve(tokens)
+  }
+
+  updateToken (rawAddress, symbol, decimals, image, type) {
+    const address = normalizeAddress(rawAddress)
+    const newEntry = { address, symbol, decimals, type }
+    const tokens = this.store.getState().tokens
+    const assetImages = this.getAssetImages()
+    const previousEntry = tokens.find((token) => {
+      return token.address === address
+    })
+    const previousIndex = tokens.indexOf(previousEntry)
+
+    if (previousEntry) {
+      tokens[previousIndex] = newEntry
+      tokens[previousIndex].isHidden = previousEntry.isHidden
     }
     assetImages[address] = image
     this._updateAccountTokens(tokens, assetImages)

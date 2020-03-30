@@ -128,7 +128,7 @@ function getAmountErrorObject ({
 }) {
   let insufficientFunds = false
   if (gasTotal && conversionRate && !selectedToken) {
-    insufficientFunds = !isBalanceSufficient({
+    insufficientFunds = balance === '0x0' || !isBalanceSufficient({
       amount,
       amountConversionRate,
       balance,

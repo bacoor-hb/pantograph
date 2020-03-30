@@ -26,6 +26,7 @@ class AddToken extends Component {
     clearPendingTokens: PropTypes.func,
     tokens: PropTypes.array,
     identities: PropTypes.object,
+    contractMetaData: PropTypes.array
   }
 
   constructor (props) {
@@ -283,10 +284,12 @@ class AddToken extends Component {
 
   renderSearchToken () {
     const { tokenSelectorError, selectedTokens, searchResults } = this.state
+    const { contractMetaData } = this.props
 
     return (
       <div className="add-token__search-token">
         <TokenSearch
+          contractMetaData={contractMetaData}
           onSearch={({ results = [] }) => this.setState({ searchResults: results })}
           error={tokenSelectorError}
         />

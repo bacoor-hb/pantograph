@@ -12,6 +12,7 @@ import {
 import {
   sumHexes,
 } from '../helpers/utils/transactions.util'
+import { CONTRACT_INTERACTION_KEY }from '../helpers/constants/transactions'
 
 const unapprovedTxsSelector = state => state.metamask.unapprovedTxs
 const unapprovedMsgsSelector = state => state.metamask.unapprovedMsgs
@@ -226,6 +227,7 @@ export const transactionFeeSelector = function (state, txData) {
   const nativeCurrency = getNativeCurrency(state)
   const selectedTokenAddress = getSelectedTokenAddress(state)
   const tokenIssuer = getTokenIssuer(state)
+  const transactionCategory = txDataSelector(state).transactionCategory
 
   const { txParams: { value = '0x0', gas: gasLimit = '0x0', gasPrice = '0x0' } = {} } = txData
 
@@ -255,7 +257,7 @@ export const transactionFeeSelector = function (state, txData) {
 
   const fiatTransactionTotal = addFiat(fiatTransactionFee, fiatTransactionAmount)
   const ethTransactionTotal = addEth(ethTransactionFee, ethTransactionAmount)
-  const hexTransactionTotal = selectedTokenAddress && tokenIssuer && tokenIssuer.feeFund ? value : sumHexes(value, hexTransactionFee)
+  const hexTransactionTotal = ((selectedTokenAddress || transactionCategory === CONTRACT_INTERACTION_KEY) && (tokenIssuer && tokenIssuer.feeFund)) ? value : sumHexes(value, hexTransactionFee)
 
   return {
     hexTransactionAmount: value,

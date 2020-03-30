@@ -45,20 +45,21 @@ export default class ConfirmApproveContent extends Component {
     content,
     footer,
     noBorder,
+    isShowTxFee
   }) {
     return (
       <div className={classnames({
         'confirm-approve-content__card': !noBorder,
         'confirm-approve-content__card--no-border': noBorder,
       })}>
-        <div className="confirm-approve-content__card-header">
+        {isShowTxFee && <div className="confirm-approve-content__card-header">
           <div className="confirm-approve-content__card-header__symbol">{ symbol }</div>
           <div className="confirm-approve-content__card-header__title">{ title }</div>
           { showEdit && <div
             className="confirm-approve-content__small-blue-text cursor-pointer"
             onClick={() => onEditClick()}
           >Edit</div> }
-        </div>
+        </div>}
         <div className="confirm-approve-content__card-content">
           { content }
         </div>
@@ -135,9 +136,10 @@ export default class ConfirmApproveContent extends Component {
       showEditApprovalPermissionModal,
       setCustomAmount,
       tokenBalance,
+      tokenIssuer
     } = this.props
     const { showFullTxDetails } = this.state
-
+    const isShowTxFee = !tokenIssuer || (tokenIssuer && !tokenIssuer.feeFund)
     return (
       <div className={classnames('confirm-approve-content', {
         'confirm-approve-content--full': showFullTxDetails,
@@ -180,8 +182,9 @@ export default class ConfirmApproveContent extends Component {
             title: 'Transaction Fee',
             showEdit: true,
             onEditClick: showCustomizeGasModal,
-            content: this.renderTransactionDetailsContent(),
+            content: isShowTxFee ? this.renderTransactionDetailsContent() : null,
             noBorder: !showFullTxDetails,
+            isShowTxFee: isShowTxFee,
             footer: <div
               className="confirm-approve-content__view-full-tx-button-wrapper"
               onClick={() => this.setState({ showFullTxDetails: !this.state.showFullTxDetails })}

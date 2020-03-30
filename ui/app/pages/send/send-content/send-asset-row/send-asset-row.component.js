@@ -5,6 +5,7 @@ import Identicon from '../../../../components/ui/identicon/identicon.component'
 import TokenBalance from '../../../../components/ui/token-balance'
 import UserPreferencedCurrencyDisplay from '../../../../components/app/user-preferenced-currency-display'
 import {PRIMARY} from '../../../../helpers/constants/common'
+import { checksumAddress }from '../../../../helpers/utils/util'
 
 export default class SendAssetRow extends Component {
   static propTypes = {
@@ -20,6 +21,7 @@ export default class SendAssetRow extends Component {
     selectedTokenAddress: PropTypes.string,
     setSelectedToken: PropTypes.func.isRequired,
     nativeCurrency: PropTypes.string.isRequired,
+    contractMetaData: PropTypes.array
   }
 
   static contextTypes = {
@@ -126,6 +128,16 @@ export default class SendAssetRow extends Component {
   renderAsset (token) {
     const { address, symbol } = token
     const { t } = this.context
+    const { tokens, contractMetaData } = this.props
+    let assetImage
+    const checksummedAddress = checksumAddress(address)
+    assetImage = contractMetaData[checksummedAddress.toLowerCase()] ? contractMetaData[checksummedAddress.toLowerCase()].icon_image : null
+    if (!assetImage) {
+      let tokenFind = tokens.find(e => e.address.toLowerCase() === checksummedAddress)
+      if (tokenFind && tokenFind.type) {
+        assetImage = `images/tokens/${tokenFind.type}.png`
+      }
+    }
 
     return (
       <div
@@ -133,7 +145,7 @@ export default class SendAssetRow extends Component {
         onClick={() => this.selectToken(address)}
       >
         <div className="send-v2__asset-dropdown__asset-icon">
-          <Identicon address={address} diameter={36} />
+          <Identicon address={address} diameter={36} wDiameter={36} image={assetImage}/>
         </div>
         <div className="send-v2__asset-dropdown__asset-data">
           <div className="send-v2__asset-dropdown__symbol">

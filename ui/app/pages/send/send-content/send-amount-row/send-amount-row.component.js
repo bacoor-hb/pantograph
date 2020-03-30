@@ -5,6 +5,7 @@ import SendRowWrapper from '../send-row-wrapper'
 import AmountMaxButton from './amount-max-button'
 import UserPreferencedCurrencyInput from '../../../../components/app/user-preferenced-currency-input'
 import UserPreferencedTokenInput from '../../../../components/app/user-preferenced-token-input'
+import { isTokenBalanceSufficient } from '../../send.utils'
 
 export default class SendAmountRow extends Component {
 
@@ -32,6 +33,19 @@ export default class SendAmountRow extends Component {
 
   static contextTypes = {
     t: PropTypes.func,
+  }
+
+  componentDidUpdate (prevProps) {
+    const { maxModeOn: prevMaxModeOn, gasTotal: prevGasTotal } = prevProps
+    const { maxModeOn, amount, gasTotal, selectedToken } = this.props
+
+    if (maxModeOn && selectedToken && !prevMaxModeOn) {
+      this.updateGas(amount)
+    }
+
+    if (prevGasTotal !== gasTotal) {
+      // this.validateAmount(amount)
+    }
   }
 
   updateGas = debounce(this.updateGas.bind(this), 500)
@@ -83,9 +97,17 @@ export default class SendAmountRow extends Component {
   }
 
   updateGas (amount) {
-    const { selectedToken, updateGas } = this.props
-
-    if (selectedToken) {
+    const { selectedToken, updateGas, tokenBalance } = this.props
+    let inSufficientTokens = false
+    if (selectedToken && tokenBalance !== null) {
+      const { decimals } = selectedToken
+      inSufficientTokens = !isTokenBalanceSufficient({
+        tokenBalance,
+        amount,
+        decimals,
+      })
+    }
+    if (selectedToken && !inSufficientTokens) {
       updateGas({ amount })
     }
   }

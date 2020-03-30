@@ -37,6 +37,7 @@ const ConfirmPageContainerSummary = props => {
             <Identicon
               className="confirm-page-container-summary__identicon"
               diameter={36}
+              wDiameter={36}
               address={identiconAddress}
               image={assetImage}
             />
