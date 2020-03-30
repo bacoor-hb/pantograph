@@ -74,6 +74,7 @@
       color: $black;
       font-weight: normal;
       letter-spacing: .5px;
+      white-space: nowrap;
     }
   }
 
@@ -106,9 +107,10 @@
   }
 
   &__account-info {
-    flex: 1 0 auto;
+    flex: 1 1 auto;
     display: flex;
     flex-flow: column nowrap;
+    overflow: hidden;
   }
 
   &__check-mark {
@@ -130,12 +132,14 @@
 
   &__identicoin {
     width: 40px;
-    height: 30px;
     position: relative;
-    overflow: hidden;
     border-radius: 3px;
     margin-right: 10px;
     margin-top: 5px;
+    &__wrapper {
+      height: 30px;
+      overflow: hidden;
+    }
   }
 
   &__name {

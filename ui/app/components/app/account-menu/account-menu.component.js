@@ -90,11 +90,13 @@ export default class AccountMenu extends PureComponent {
             { isSelected && <div className="account-menu__check-mark-icon" /> }
           </div>
           <div className="account-menu__identicoin">
-            <Identicon
-              address={identity.address}
-              diameter={40}
-              wDiameter={40}
-            />
+            <div className="account-menu__identicoin__wrapper">
+              <Identicon
+                address={identity.address}
+                diameter={40}
+                wDiameter={40}
+              />
+            </div>
           </div>
           <div className="account-menu__account-info">
             <div className="account-menu__name">
