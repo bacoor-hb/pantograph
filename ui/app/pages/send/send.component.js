@@ -64,7 +64,6 @@ export default class SendTransactionScreen extends PersistentForm {
     query: '',
     toError: null,
     toWarning: null,
-    isInitialized: true
   }
 
   constructor (props) {
@@ -88,7 +87,6 @@ export default class SendTransactionScreen extends PersistentForm {
   }
 
   componentDidUpdate (prevProps) {
-    const { isInitialized } = this.state
     const {
       amount,
       amountConversionRate,
@@ -119,40 +117,40 @@ export default class SendTransactionScreen extends PersistentForm {
 
     const uninitialized = [prevBalance, prevGasTotal].every(n => n === null)
 
-    const amountErrorRequiresUpdate = isInitialized ? false : doesAmountErrorRequireUpdate({
-      balance,
-      gasTotal,
-      prevBalance,
-      prevGasTotal,
-      prevTokenBalance,
-      selectedToken,
-      tokenBalance,
-    })
+    // const amountErrorRequiresUpdate = doesAmountErrorRequireUpdate({
+    //   balance,
+    //   gasTotal,
+    //   prevBalance,
+    //   prevGasTotal,
+    //   prevTokenBalance,
+    //   selectedToken,
+    //   tokenBalance,
+    // })
 
-    if (amountErrorRequiresUpdate) {
-      const amountErrorObject = getAmountErrorObject({
-        amount,
-        amountConversionRate,
-        balance,
-        conversionRate,
-        gasTotal,
-        primaryCurrency,
-        selectedToken,
-        tokenBalance,
-      })
-      const gasFeeErrorObject = selectedToken
-        ? getGasFeeErrorObject({
-          amountConversionRate,
-          balance,
-          conversionRate,
-          gasTotal,
-          primaryCurrency,
-          selectedToken,
-          tokenIssuer
-        })
-        : { gasFee: null }
-      updateSendErrors(Object.assign(amountErrorObject, gasFeeErrorObject))
-    }
+    // if (amountErrorRequiresUpdate) {
+    //   const amountErrorObject = getAmountErrorObject({
+    //     amount,
+    //     amountConversionRate,
+    //     balance,
+    //     conversionRate,
+    //     gasTotal,
+    //     primaryCurrency,
+    //     selectedToken,
+    //     tokenBalance,
+    //   })
+    //   const gasFeeErrorObject = selectedToken
+    //     ? getGasFeeErrorObject({
+    //       amountConversionRate,
+    //       balance,
+    //       conversionRate,
+    //       gasTotal,
+    //       primaryCurrency,
+    //       selectedToken,
+    //       tokenIssuer
+    //     })
+    //     : { gasFee: null }
+    //   updateSendErrors(Object.assign(amountErrorObject, gasFeeErrorObject))
+    // }
 
     if (!uninitialized) {
 
@@ -177,18 +175,46 @@ export default class SendTransactionScreen extends PersistentForm {
   }
 
   componentDidMount () {
+    // fetch basic gas estimates
     this.props.fetchBasicGasEstimates()
       .then(() => {
         this.updateGas()
       })
     
-    const { selectedToken, setTokenIssuer, network } = this.props
+    // fetch token issuer
+    const { selectedToken, setTokenIssuer, network, tokenBalance, from: { balance }, amount, amountConversionRate, conversionRate, gasTotal, primaryCurrency, tokenIssuer, updateSendErrors } = this.props
     const selectedTokenAddress = selectedToken && selectedToken.address
     if (selectedTokenAddress) {
       fetchTokenIssuer(selectedTokenAddress, network)
         .then((res) => {
           setTokenIssuer(res)
         })
+    }
+
+    // check balance
+    if (balance === '0x0') {
+      const amountErrorObject = getAmountErrorObject({
+        amount,
+        amountConversionRate,
+        balance,
+        conversionRate,
+        gasTotal,
+        primaryCurrency,
+        selectedToken,
+        tokenBalance,
+      })
+      const gasFeeErrorObject = selectedToken
+        ? getGasFeeErrorObject({
+          amountConversionRate,
+          balance,
+          conversionRate,
+          gasTotal,
+          primaryCurrency,
+          selectedToken,
+          tokenIssuer
+        })
+        : { gasFee: null }
+      updateSendErrors(Object.assign(amountErrorObject, gasFeeErrorObject))
     }
   }
 

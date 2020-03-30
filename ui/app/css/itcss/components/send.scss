@@ -643,6 +643,10 @@
     height: 54px;
     border: none;
 
+    .currency-display-component {
+      overflow: hidden;
+    }
+
     &__single-asset {
       display: flex;
         flex-flow: row nowrap;
@@ -670,6 +674,7 @@
       display: flex;
       flex-flow: column nowrap;
       margin-left: 8px;
+      overflow: hidden;
     }
 
     &__symbol {
@@ -684,6 +689,7 @@
 
       &__label {
         margin-right: .25rem;
+        white-space: nowrap;
       }
     }
 
