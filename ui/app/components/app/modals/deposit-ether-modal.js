@@ -123,7 +123,7 @@ DepositEtherModal.prototype.renderRow = function ({
 DepositEtherModal.prototype.render = function () {
   const { network, toWyre, toCoinSwitch, address, toFaucet } = this.props
 
-  const isTestNetwork = ['3', '4', '5', '42'].find(n => n === network)
+  const isTestNetwork = ['89'].find(n => n === network)
   const networkName = getNetworkDisplayName(network)
 
   return h('div.page-container.page-container--full-width.page-container--full-height', {}, [
@@ -150,17 +150,22 @@ DepositEtherModal.prototype.render = function () {
       h('div.deposit-ether-modal__buy-rows', [
 
         this.renderRow({
-          logo: h('img.deposit-ether-modal__logo', {
-            style: {
-              backgroundImage: "url('./images/changelly_logo.png')",
-              height: '40px',
-            },
-          }),
+          logo: h('img', { src: 'images/changelly_logo.png', style: { height: '50px' } }),
           title: this.context.t('buyCoinSwitch'),
           text: this.context.t('buyCoinSwitchExplainer'),
           buttonLabel: this.context.t('continueToCoinSwitch'),
           onButtonClick: () => this.goToNewTab('https://change.pantograph.io'),
+          hide: isTestNetwork,
         }),
+
+        this.renderRow({
+          logo: h('img', { src: 'images/tomo.svg', style: { height: '50px' } }),
+          title: 'TOMOCHAIN TESTNET FAUCET',
+          // text: this.facuetRowText(networkName),
+          buttonLabel: 'TESTNET FAUCET',
+          onButtonClick: () => this.goToNewTab('https://faucet.testnet.tomochain.com'),
+          hide: !isTestNetwork,
+        })
 
       ]),
 

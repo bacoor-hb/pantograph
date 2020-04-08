@@ -656,7 +656,7 @@
     "message": "法定通貨、主要通貨、言語、blockies identicon"
   },
   "getEther": {
-    "message": "TomoChainを取得する"
+    "message": "Tomoを取得する"
   },
   "getEtherFromFaucet": {
     "message": "トモチェーンを蛇口から$1で手に入れましょう",
@@ -811,7 +811,7 @@
     "message": "トークンを追加しますか？"
   },
   "likeToConnect": {
-    "message": "$1がPantographアカウントに接続したい、",
+    "message": "$1がPantographアカウントに接続",
     "description": "$1は、Pantographへの接続を要求するサイト/ dappの名前/ urlです"
   },
   "links": {
@@ -1416,7 +1416,7 @@
     "message": "利用規約"
   },
   "testFaucet": {
-    "message": "Test Faucet"
+    "message": "TomoChain Testnet Faucet"
   },
   "thisWillAllow": {
     "message": "これにより、$1で次のことが可能になります。",
